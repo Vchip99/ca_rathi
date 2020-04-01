@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RCM Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="sidemenu/sidemenu_layout.css">
+
+  <link rel="stylesheet" href="sidemenu/_all-skins.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css" />
+  <!-- <link href="css/slideanim.css" rel="stylesheet"/> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script src="js/slideanim.js"></script> -->
+  <style type="text/css">
+  /*sidemenuStyling*/
+
+      /*footer*/
+   @media only screen and (max-width: 1024px) {
+    .vchip-design, .institute1 {
+        display:none;
+    }
+}
+
+/*testimonial*/
+@media only screen and (max-width: 1024px) {
+    .testimonial-image {
+        display:none;
+    }
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+/*    background: #333333;
+*/    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+#sidebar{ height: 100%;
+    position: absolute;}
+@media only screen and (max-width: 766px){
+  #sidebar{
+    position:absolute;
+  }
+}
+/*sidemenuStyling*/
+
+/*pageStyling*/
+.content1{
+  padding: 20px;
+
+}
+.innercontent1{
+  min-height: 150px;
+  margin: 10px;
+  background-color: #01bafd;
+  color:white;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 28px;
+  transition: font-size 0.5s ease;
+  z-index: 999999;
+}
+.innercontent1 a{
+  color:white;
+}
+.innercontent1 span{
+  z-index: 999;
+  font-size: 75px;
+  transition:font-size 0.4s ease;
+
+}
+.hoverable:hover .innercontent1{
+  /*opacity:1;*/
+  font-size: 30px;
+
+}
+.hoverable:hover .innercontent1 span{
+  font-size: 80px;
+} 
+@media only screen and (max-width:1200px){
+  .content-wrapper .innercontent1{
+    font-size: 24px;
+  }
+  .content-wrapper .innercontent1 span{
+    font-size: 55px;
+
+  }
+  .hoverable:hover .innercontent1{
+    font-size: 22px;
+  }
+  .hoverable:hover .innercontent1 span{
+    font-size: 60px;
+  } 
+
+  /*.content-wrapper .col-1{
+    display:none;
+  }
+  .content-wrapper .col-2{
+    width:100%;
+  }*/
+}
+@media only screen and (max-width:950px){
+
+  .content-wrapper .col-1{
+    display:none;
+  }
+  .content-wrapper .col-2{
+    width:100%;
+  }
+
+}
+/*@media only screen and (max-width:766x){
+  .content-wrapper .col-1{
+    width:100%;
+  }
+  .content-wrapper .col-2{
+    width:100%;
+  }
+
+}*/
+@media only screen and (max-width:540px){
+  .content-wrapper .col{
+    width: 100%;
+  }
+  .content-wrapper .col-2{
+    margin-top: 40px;
+  }
+}
+/*pageStyling*/
+</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse" id="body">
+<div class="wrapper" style="background-color: white;">
+
+  <header class="main-header ">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b> RCM</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>RCM</b>Institute</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top ">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="zxc" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+       <!-- <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+        </ul>
+      </div> --> 
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" id="sidebar" >
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel" style="background-color: black;">
+        <div class="pull-left image">
+          <img src="img/user/user.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>RCM</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" style="background-color: black;">
+        <li class="header">RCM</li>
+        <li class="treeview ">
+          <a href="#">
+            <i class="fa fa-home"></i> <span>Admission Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+               <li><a href="RCMadmissionForm.html"><i class="fa fa-circle-o"></i> Admission Form</a></li>
+                <li id="header1"><a href="RCMadmissionReciept.html" ><i class="fa fa-circle-o"></i>Admission Reciept</a></li>
+                <li>
+                <a href="RCMsubCourseDetails.html"><i class="fa fa-circle-o"></i>Sub Course Details 
+                <!-- <span class="pull-right-container">
+                   <span class="label label-primary pull-right" data-toggle="tooltip"  title="Remove">
+                    <i class="fa fa-times "></i>
+                   </span>
+                  </span> -->
+                  </a>
+                </li>
+               <li>
+               <a href="RCMcoursePayment.html"><i class="fa fa-circle-o"></i> Course Payment</a>
+                </li>
+               
+
+          </ul>
+        </li>
+              <li><a href="RCMadminPanel2.html"><i class="fa fa-dashboard text-aqua"></i> <span>DashBoard</span></a></li>
+
+        <li>
+          <a href="">
+            <i class="fa fa-th"></i> <span>Assign Faculty</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        
+        <ul class="treeview-menu">
+               <li><a href="assignSubjFac.html"><i class="fa fa-circle-o"></i> For Courses</a></li>
+               <li><a href="assignExamFac.html" ><i class="fa fa-circle-o"></i>For Exams</a></li>
+        </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Assets Management</span></a></li>
+        <li><a href="RCMlockerManagement.html"><i class="fa fa-lock text-red"></i> <span>Locker Management</span></a></li>
+        <li><a href="RCMreadingRoomManagement.html"><i class="fa fa-book text-aqua"></i> <span>Reading Room Management</span></a></li>
+        <li><a href="RCMsyllabus.html"><i class="fa fa-file-text text-yellow"></i> <span>Syllabus Management</span></a></li>
+        <!-- <li><a href="RCMtimeTable.html"><i class="fa fa-calendar text-red"></i> <span>Time Table Management</span></a></li> -->
+        <li><a href="RCMmaterialManagement.html"><i class="fa fa-indent text-aqua"></i> <span>Material Management</span></a></li>
+        <li><a href="RCMlibraryManagement.html"><i class="fa fa-circle-o text-yellow"></i> <span>Library Management</span></a></li>
+        <li><a href="RCMpayRollManagement.html"><i class="fa fa-circle-o text-red"></i> <span>PayRoll Management</span></a></li>
+        <li><a href="RCMtimeTable.html"><i class="fa fa-circle-o text-aqua"></i> <span>Time Table</span></a></li>
+        <li><a href="RCMinquiry.html"><i class="fa fa-circle-o text-yellow"></i> <span>Inquiry</span></a></li>
+        
+        <li><a href="RCMadminMessage.html"><i class="fa fa-bell text-aqua"></i> <span>Admin Message</span></a></li>
+        <li><a href="index.html"><i class="glyphicon glyphicon-log-out text-white"></i> <span>Logout</span></a></li>
+        
+        
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <div class="content-wrapper" style="margin-left: 40px;">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2" style="margin-top: 20px;margin-left:25px ">
+        <h1 class="m-0 text-dark">Dashboard</h1>
+        </div>
+        <div class="row content1 text-center">
+          <div class="col-md-4 col-sm-4 col-xs-6 col hoverable">
+            <div class="row innercontent1 bg-primary">
+              
+              <a href="RCMlockerManagement.html"><div class="col-sm-3 col-1" style="float:left;">
+                <span class="fa fa-lock"></span>
+              </div>
+              <div class="col-sm-9 col-2" style="float:right">
+                <p>Locker Management</p>
+              </div></a>
+
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-6 col hoverable">
+            <div class="row innercontent1" style="background-color: #4caf50">
+              
+              <a href="RCMlibraryManagement.html"><div class="col-sm-3 col-1" style="float:left;">
+                <span class="fa fa-server"></span>
+              </div>
+              <div class="col-sm-9 col-2" style="float:right">
+                <p>Library Management</p>
+              </div></a>
+
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-6 col hoverable">
+            <div class="row innercontent1" style="background-color: #f44334;"">
+              
+              <a href="RCMsyllabus.html"><div class="col-sm-3 col-1" style="float:left;">
+                <span class="fa fa-file-text"></span>
+              </div>
+              <div class="col-sm-9 col-2" style="float:right">
+                <p>Syllabus Management</p>
+              </div></a>
+
+            </div>
+          </div>
+        
+          <div class="col-md-4 col-sm-4 col-xs-6 col hoverable">
+            <div class="row innercontent1 bg-primary">
+              
+              <a href="RCMpayRollManagement.html"><div class="col-sm-3 col-1" style="float:left;">
+                <span class="fa fa-sliders"></span>
+              </div>
+              <div class="col-sm-9 col-2" style="float:right">
+                <p>Pay Roll Management</p>
+              </div></a>
+
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-6 col hoverable">
+            <div class="row innercontent1 " style="background-color: #4caf50">
+              
+              <a href="RCMinquiry.html"><div class="col-sm-3 col-1" style="float:left;">
+                <span class="fa fa-comments-o"></span>
+              </div>
+              <div class="col-sm-9 col-2" style="float:right">
+                <p>Inquiry Mangement</p>
+              </div></a>
+
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-6 col hoverable">
+            <div class="row innercontent1 " style="background-color: #f44334;">
+              
+              <a href="RCMtimeTable.html"><div class="col-sm-3 col-1 " style="float:left;">
+                <span class="fa fa-calendar"></span>
+              </div>
+              <div class="col-sm-9 col-2" style="float:right">
+                <p>Timetable Management</p>
+              </div></a>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+</div>
+
+<!-- sidebar script -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+$("#header1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+$("#footer1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+</script>
+
+</body>
+</html>

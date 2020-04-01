@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Doubt Corner</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="sidemenu/sidemenu_layout.css">
+
+  <link rel="stylesheet" href="sidemenu/_all-skins.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css" />
+  <!-- <link href="css/slideanim.css" rel="stylesheet"/> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script src="js/slideanim.js"></script> -->
+  <style type="text/css">
+  /*sidemenuStyling*/
+
+      /*footer*/
+   @media only screen and (max-width: 1024px) {
+    .vchip-design, .institute1 {
+        display:none;
+    }
+}
+
+/*testimonial*/
+@media only screen and (max-width: 1024px) {
+    .testimonial-image {
+        display:none;
+    }
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+/*    background: #333333;
+*/    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+#sidebar{ height: 100%;
+    position: absolute;}
+@media only screen and (max-width: 766px){
+  #sidebar{
+    position:absolute;
+  }
+}
+/*sidemenuStyling*/
+
+	.page5 .container{
+		margin-top: 10px;
+	}
+
+	.page5 .btn{
+		float: right;
+	}
+
+	.page5 th{
+		background-color: #01bafd;
+		color: white;
+	}
+
+	@media only screen and (max-width: 767px){
+		.page5 .btn{
+			margin-right: 20px;
+		}
+
+		.page5 .table-responsive{
+			margin-left: 5px;
+		}
+	}
+
+	@media only screen and (max-width: 991px){
+		.page5 .btn{
+			margin-top: 10px;
+		}
+	}
+
+	.page5 a{
+		text-decoration: none;
+	}
+
+	.page5 a:hover{
+		text-decoration: none;
+	}
+
+	.page5 th{
+		font-size: 18px;
+	}
+
+	 #cai1,#caf1{
+		display: none;
+	}
+
+</style>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse" id="body">
+<div class="wrapper" style="background-color: white;">
+
+  <header class="main-header ">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b> RCM</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>RCM</b>Institute</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top ">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="zxc" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+       <!-- <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+        </ul>
+      </div> --> 
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" id="sidebar" >
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel" style="background-color: black;">
+        <div class="pull-left image">
+          <img src="img/user/user.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Lecturer</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" style="background-color: black;">
+        <li class="header">RCM</li>
+        
+        <li><a href="lecturer_panel.html"><i class="fa fa-dashboard text-aqua"></i> <span>DashBoard</span></a></li>
+
+        
+        <li><a href="assignsubmit.html"><i class="fa fa-circle-o text-yellow"></i> <span>Assignment Submission </span></a></li>
+        <li><a href="RCMtt.html"><i class="fa fa-circle-o text-red"></i> <span>Week TimeTable</span></a></li>
+        <li><a href="new_time_table.html"><i class="fa fa-circle-o text-red"></i> <span>DateWiseTimeTable</span></a></li>
+        <li><a href="marks_entry.html"><i class="fa fa-circle-o text-aqua"></i> <span>Marks Entry</span></a></li>
+        <li><a href="attendance_entry.html"><i class="fa fa-circle-o text-yellow"></i> <span>Attendance Sheet</span></a></li>
+        <!-- <li><a href="RCMtimeTable.html"><i class="fa fa-calendar text-red"></i> <span>Time Table Management</span></a></li> -->
+        <li><a href="lec_admin_message.html"><i class="fa fa-circle-o text-aqua"></i> <span>Admin Message</span></a></li>
+        
+        <li><a href="lec_doubt_corner.html"><i class="fa fa-circle-o text-red"></i> <span>Doubt Corner</span></a></li>
+        <li><a href="index.html"><i class="glyphicon glyphicon-log-out text-white"></i> <span>Logout</span></a></li>
+        
+        
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <div class="content-wrapper" style="margin-left: 40px;">
+    <div class="content-header">
+
+
+
+<!-- content -->
+	<div class="container page5" style="margin-top: 50px">
+		<div class="row" style="padding-left: 10px">
+		<h1>Doubt Corner</h1>
+		</div>
+		<div class="row">
+			<form method="POST" class="form-horizontal">
+				<label class="control-label col-md-2">Select Course:</label>
+        		<div class="col-md-4">
+          			<select name="course" class="form-control" id="course" onchange="showDiv1(this)">
+            			<option value="XI & XII" selected="selected">XI & XII</option>
+            			<option value="CA Intermediate">CA Intermediate</option>
+            			<option value="CA Foundation">CA Foundation</option>
+          			</select>
+        		</div>
+    		</form>
+		</div><br/>
+		<div class="row">
+			<a href="lec_ask_doubt.html"><button type="submit" class="btn btn-success">Your Doubt</button></a>
+		</div><br/>
+		<div class="row table-responsive" id="jee1">
+			<table class="table">
+				<thead>
+					<th>Title</th>
+					<th><span class="fa fa-heart"></span></th>
+					<th><span class="fa fa-eye"></span></th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<h4><a href="lec_doubt_page.html">Trigonometory</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Bionomial Series</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">P&C</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Probability</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Calculus</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row table-responsive" id="cai1">
+			<table class="table">
+				<thead>
+					<th>Title</th>
+					<th><span class="fa fa-heart"></span></th>
+					<th><span class="fa fa-eye"></span></th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<h4><a href="#">Statistics</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Accounts</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Quants</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Statistics</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Acconts</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row table-responsive" id="caf1">
+			<table class="table">
+				<thead>
+					<th>Title</th>
+					<th><span class="fa fa-heart"></span></th>
+					<th><span class="fa fa-eye"></span></th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<h4><a href="#">Statistics</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Accounts</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Quants</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Statistics</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>
+							<h4><a href="#">Acconts</a></h4>
+							<h5>You&nbsp;<span>3 days ago</span></h5>
+						</td>
+						<td>0</td>
+						<td>5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" style="margin-bottom: 20px">
+			<a href="lecturer_panel.html"><button type="submit" class="btn btn-danger">&lt;&nbsp;Back</button></a>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+
+
+<!-- pagescript -->
+	<script type="text/javascript">
+		function showDiv1(elem){
+			if(elem.value==="XI & XII"){
+				document.getElementById("jee1").style.display="block";
+				document.getElementById("cai1").style.display="none";
+				document.getElementById("caf1").style.display="none";
+			}
+			else if(elem.value==="CA Intermediate"){
+				document.getElementById("jee1").style.display="none";
+				document.getElementById("cai1").style.display="block";
+				document.getElementById("caf1").style.display="none";
+			}
+			else{
+				document.getElementById("jee1").style.display="none";
+				document.getElementById("cai1").style.display="none";
+				document.getElementById("caf1").style.display="block";
+			}
+		}
+	</script>
+
+<!-- sidebar script -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+$("#header1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+$("#footer1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+</script>
+</body>
+
+</html>

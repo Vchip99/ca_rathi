@@ -1,0 +1,220 @@
+/*pagestyling*/	
+
+	.container{
+		margin-top: 10px;
+	}
+
+	.page .col-md-8 p{
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.page .col-md-8{
+		margin-top: 60px;
+	}
+
+	.page img{
+		max-width: 203px;
+		max-height: 203px;
+	}
+
+	.page img:hover{
+		transform: rotateY(360deg);
+		transition: transform 2s;
+	}
+
+	.page .pic{
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	.page .pagerows{
+		border: 2px solid #999;
+	}
+
+	@media only screen and (max-width: 991px){
+		 .page .right{
+			border-bottom: 2px solid #999;
+		}
+
+		.page .pic{
+			border-bottom: 2px solid #999;
+		}
+
+		.page .col-md-8{
+			text-align: center;
+			margin: auto;
+		}
+	}
+
+	@media only screen and (min-width: 992px){
+		.page .row{
+			border-bottom: 2px solid #999;
+		}
+
+		.page .right{
+			border-right: 2px solid #999;
+		}
+
+		.page .col-md-8{
+			text-align: left;
+		}
+	}
+
+	.page .caption{
+		font-size: 20px;
+	}
+
+	.page a{
+		text-decoration: none;
+	}
+
+	.page #overlay {
+    	position: fixed;
+    	display: none;
+    	width: 100%;
+    	height: 100%;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	background-color: rgba(0,0,0,0.7);
+    	z-index: 2;
+    	cursor: pointer;
+	}
+
+	.page #list{
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	font-size: 50px;
+    	color: white;
+    	transform: translate(-50%,-50%);
+	}
+
+	.page .modal {
+    	display: none; /* Hidden by default */
+    	position: fixed; /* Stay in place */
+    	z-index: 3; /* Sit on top */
+    	left: 0;
+    	top: 0;
+    	/*width: 100%;  Full width */
+    	height: 100%; /* Full height */
+    	overflow: hidden; /* Enable scroll if needed */
+    	background-color: rgb(0,0,0); /* Fallback color */
+    	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    	padding-top: 60px;
+	}
+
+	/* Modal Content/Box */
+	.page .modal-content {
+		background-color: #fefefe;
+    	margin: auto; /* 5% from the top, 15% from the bottom and centered */
+    	width: 100%; /* Could be more or less, depending on screen size */
+	}
+
+	.page .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #111;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.page .close:hover,
+.page .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.page .animate {
+    animation: animatezoom 0.6s
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    .page span.psw {
+       display: block;
+       float: none;
+    }
+    .page .cancelbtn {
+       width: 100%;
+    }
+}
+
+	.page button {
+    	background-color: #4CAF50;
+    	color: white;
+    	padding: 14px 20px;
+    	margin: 8px 0;
+    	border: none;
+    	cursor: pointer;
+    	width: 100%;
+	}
+
+	.page button:hover {
+    	opacity: 0.8;
+	}
+
+	@media only screen and (max-width: 766px){
+		.page input[type=number], input[type=file] {
+    		width: 100%;
+    		padding: 12px 20px;
+    		margin: 8px 0;
+    		display: inline-block;
+   			border: 1px solid #ccc;
+    		box-sizing: border-box;
+		}
+
+		.page #mit{
+			width: 100%
+		}
+
+	}
+
+	@media only screen and (min-width: 767px){
+		.page input[type=number], input[type=file] {
+			width: 55%;
+			padding: 12px 20px;
+    		margin: 8px 0;
+    		display: inline-block;
+   			border: 1px solid #ccc;
+    		box-sizing: border-box;
+		}
+
+		.page #mit{
+			width: 55%;
+		}
+	}
+
+	.page ul{
+		list-style-type: none;
+	}
+
+	.page #list a{
+		text-decoration: none;
+		color: white;
+	}
+
+	.page #list a:hover{
+		color: #01bafd;
+	}
+
+	@media only screen and (min-width: 652px) and (max-width: 1030px){
+		.page #list{
+			font-size: 30px;
+		}
+	}
+
+	@media only screen and (max-width: 651px){
+		.page #list{
+			font-size: 20px;
+		}
+	}

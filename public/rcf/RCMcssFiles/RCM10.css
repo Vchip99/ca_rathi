@@ -1,0 +1,145 @@
+/*container1*/
+.container1{
+  width:25%;
+  float:left;
+  border:1px solid grey;
+  margin:10px;
+
+}
+.container1 .courseTitle{
+  margin:30px 10px 20px 10px;
+  padding: 10px;
+  background-color: #9ACD32;
+
+  /*text-align: center;*/
+}
+.container1  .courseDetails{
+  margin-top:10px  ;
+  margin-bottom: 10px;
+  margin-left: -25px;
+  padding: 20px 0px; 
+
+}
+.container1  .courseDetails a{
+  color:black;
+}
+.container1 .courseDetails a:hover{
+  color:green;
+}
+/*container1*/
+/*container2*/
+.container2{
+  width:70%;
+  float:right;
+}
+.container2 .courseDetails1{
+  padding: 5px;
+}
+.container2 .details1Header{
+  padding: 10px;
+  background-color:  #d9edf7;
+}
+.container2 .details1Content{
+  padding: 10px;
+}
+.container2 .courseDetails2{
+  margin:20px 0px;
+}
+.container2 .courseDetails2 img{
+  max-height:240px;
+  max-width: 240px;
+}
+.container2 .courseDetails2 .overlay2{
+  width:245px;
+  height:245px;
+  z-index: 1;
+  /*background-color: rgba(0,0,0,0.8);*/
+  background-color: rgba(1,186,253,0.6);
+  opacity:0;
+  top:0px;
+  position: absolute;
+  padding-top: 80px;
+  transition: 1s ease;
+  margin:auto;
+}
+.container2 .courseDetails2 a{
+  color:white;
+  font-size: 28px;
+  transition: 0.3s ease;
+}
+.container2 .courseDetails2 a:hover{
+  /*background-color: #01bafd;*/
+  font-size: 32px;
+}
+.container2 .courseDetails2 :hover .overlay2{
+  opacity: 1
+}
+/*@media only screen and (max-width:1210px)
+{
+  .container2 .courseDetails2 img{
+  height:220px;
+  width: 220px;
+}
+.container2 .courseDetails2 .overlay2{
+  width:222px;
+  height:220px;
+}
+}*/
+@media only screen and (max-width: 1090px)
+{
+  .col-1{
+    width:100%;
+  }
+  .container2 .courseDetails2 .overlay2{
+   margin-left:30%;
+
+}
+}
+@media only screen and (max-width: 942px)
+{
+  
+  .container2 .courseDetails2 .overlay2{
+   margin-left:27%;
+
+
+}
+/*@media only screen and (max-width: 972px)
+{
+  
+  .container2 .courseDetails2 .overlay2{
+   margin-left:26%;
+
+
+}*/
+@media only screen and (max-width: 858px)
+{
+  .container1{
+    display: none;
+  }
+  .container2{
+    width:100%;
+  }
+  .container2 .courseDetails2 .overlay2{
+   margin-left:30%;
+}
+/*@media only screen and (max-width: 610px)
+{
+  
+  .container2 .courseDetails2 .overlay2{
+   margin-left:21%;
+   width:270px;
+   }
+
+
+}*/
+@media only screen and (max-width: 610px)
+{
+  
+  .container2 .courseDetails2 .overlay2{
+   margin-left:-15px;
+   width:100%;
+   }
+
+
+}
+/*container2*/

@@ -1,0 +1,488 @@
+<!doctype html>
+<html>
+<head>
+<title>About RCM</title>
+<meta name="description" content="Basic Info ">
+<meta charset="UTF-8">
+<meta name="keywords" content="RCM,rcm">
+<meta name="author" content="Aaradhya Deshpande">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- common style -->
+<link rel="stylesheet" href="RCMcssFiles/RCMcommon.css">
+
+<style type="text/css">
+
+/*pagestyling*/
+a{
+	text-decoration: none;
+}
+/*a:hover{
+	text-decoration: none;	
+}*/
+.caption{
+	padding-left: 10px;
+}
+
+a .caption{
+	text-decoration: none;
+}
+
+.col-md-6{
+	background: url(RCMimages/aakash.png) no-repeat;
+	background-position: center;
+}
+
+.double-icon-img img{
+	width: 83px;
+	height: 83px;
+	border: 3px solid #2f8fd7;
+	border-radius: 72px;
+}
+/*.teacher div{
+	min-height: 230px;
+}
+.teacher img{
+	width:200px;
+	height:225px;
+}*/
+
+/*@media (max-width: 767px){
+	.hidden-xs{
+		display: none !important;
+	}
+}*/
+/*.teacher div:hover .team-hover{
+	opacity:1;
+}*/
+.panel-title{
+	font-weight: bold;
+	color: white;
+}
+
+@media only screen and (max-width: 991px){
+	.col-1{
+		width: 90%;
+		margin: auto;
+	}
+	.col-2{
+		width: 90%;
+		margin: 60px auto 0px;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+	.col-1{
+		border-right: 2px solid #000;
+	}
+}
+
+.row-content{
+	text-align: center;
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- overlay -->
+<div id="myNav" class="overlay">
+    
+      <div class="overlay-content">
+        
+        <div class="col-sm-6 col-sm-offset-2 col-1" >
+        
+            <div class="form-wrap" id="id01" style="z-index:25;margin:auto;">
+                <div class="row" id="r2">
+                    <form method="POST" >
+                      <div class="form-group" style=" color: white;border-radius: 4px;">
+                        <ul class="nav nav-tabs">
+                        <li class="active col-xs-5" ><a href="#signin" data-toggle="tab" style="text-align: center"><h3><strong>Sign In</strong></h3></a></li>
+                        
+                        <li class="col-xs-5" style="text-align: center;"><a href="#signup" data-toggle="tab"><h3><strong>Sign Up</strong></h3></a></li>
+                        <li class="col-xs-2"><span onclick="closeNav()"  class="close" title="Close Modal">&times;</span></li>
+                        
+                        </ul>
+                      </div>
+                      <div class="tab-content"> 
+                        <div id="signin" class="tab-pane fade in active">
+                          <div class="form-group">
+                              <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" name="password" placeholder="Password" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                          <div style="float:left;width:50%">
+                            <button type="submit" class="btn" style="width: 100%">Sign In</button>
+                          </div>
+                          <div style="float: right;width:50%;text-align: center;color:white;">
+                            <a href="#" style="font-size: 14px"><strong>Forgot Password?</strong></a> 
+                          </div>
+                          </div>
+                        </div>
+                        <div id="signup" class="tab-pane fade">
+                          <div class="form-group">
+                              <input type="text" name="name" placeholder="User Name" class="form-control" />
+                          </div>
+                          <!-- <div class="form-group">
+                              <input type="text" name="mobileNo" placeholder="Mobile No." class="form-control" />
+                          </div> -->
+                          <div class="form-group">
+                              <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" name="password" placeholder="Password" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                          <div style="float:left;width:50%">
+                            <button type="submit" class="btn" style="width: 100%">Sign Up</button>
+                          </div>
+                          <div style="float: right;width:50%;text-align:center;color:white;">
+                            <a href="#" style="font-size: 14px"><strong>Already Member?</strong></a> 
+                          </div>
+                          </div>
+                        </div>
+                      </div>   
+                    </form>
+      
+                </div>
+            </div>
+                
+        </div>
+      </div>
+</div>
+<!-- nav1 -->
+         <nav class="navbar navbar-inverse navbar-fixed-top" id="nav1" >
+                <div class="container-fluid">
+                    <div class="navbar-header" style="padding-bottom: 10px;">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                        <span class="caret" style="color: white"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand"><span class="glyphicon glyphicon-home"></span>Home</a>
+                        
+                        
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="aboutrcm.html">About Us</a></li>
+                        <li><a href="contactUs.html"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
+                        
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a onclick="openNav();" style="cursor:pointer"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                        
+                        
+                    </ul>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </nav> 
+ <!-- nav2 -->       
+            <nav class="navbar navbar-default navbar-fixed-top" id="nav2" >
+                <div class="container-fluid">
+                    <div class="navbar-header" style="margin-right: 40px;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                     </button>
+                    <a class="navbar-brand" href="index.html">RCM <span id="institute" >Institute</span></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar" >
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- <li><a href="courses.html"><span class="glyphicon glyphicon-"></span>Courses</a></li> -->
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-"></span> Courses<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="margin-right: 75%">
+                              <li ><a href="RCM10.html">10/12</a></li>
+                              <li ><a href="RCM10.html">CA Intermediate</a></li>
+                              <li ><a href="RCM10.html">CA Foundation</a></li>
+                              <!-- <li ><a href="#logout"><span class="glyphicon glyphicon-log-out"></span></a></li> -->
+                            </ul>
+                            </li>
+                            <li><a href="RCMtestseries.html">Test Series</a></li>
+                            <li class="navbarHover"><a href="batches.html">Batches</a></li>
+                        
+                            <li><a href="RCMfaq.html"><span class="glyphicon glyphicon-"></span>FAQ's</a></li>
+                            <li><a href="RCMcarrer.html"><span class="glyphicon glyphicon-"></span>Carrer</a></li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+                            <ul class="dropdown-menu" style="margin-right: 75%">
+                              <li ><a href="student_panel.html">Student</a></li>
+                              <li ><a href="parent_panel.html">Parent</a></li>
+                              <li ><a href="lecturer_panel.html">Lecturer</a></li>
+                              <li ><a href="RCMadminPanel2.html">Admin</a></li>
+                              
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+<!-- content -->
+	<div class="container" style="margin-top: 140px;">
+		<div class="row" style="padding-left: 20px;">
+		<h1>About Us</h1>
+		</div>
+		<div class="row" style="padding: 20px;">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color: #01bafd;">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1"><div width="100%">
+							<h3 class="panel-title">Why RCM?<i class="indicator glyphicon glyphicon-chevron-up pull-right"></i></h3>
+						</div></a>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="row" style="padding-left: 10px" >
+								<p>This sidebar is as tall as its content (the links), and is always shown.</p>
+  								<p>Scroll down the page to see the result.</p>
+  								<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  								<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  								<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  								<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color: #01bafd;">
+						<a class="accordion-toggle"  data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+						<div width="100%">
+							<h3 class="panel-title">Courses<i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></h3>
+						</div>
+						</a>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse">
+						<div class="panel-body" style="background-color: #333;">
+							<div class="row">
+								<div class="col-md-4 text-center">
+									<a href="#"><img src="RCMimages/xi.jpg" alt="11th and 12th" />
+										<div class="caption">XI and XII</div></a>
+								</div>
+								<div class="col-md-4 text-center">
+									<a href="#"><img src="RCMimages/ca.png" alt="CA Intermediate" />
+										<div class="caption">CA Intermediate</div></a>
+								</div>
+								<div class="col-md-4 text-center">
+									<a href="#"><img src="RCMimages/ca.png" alt="CA Foundation" />
+										<div class="caption">CA Foundation</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color: #01bafd;">
+					<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+					<div width="100%">
+						<h3 class="panel-title">Test Series<i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></h3>
+					</div>
+					</a>
+					</div>
+					<div id="collapse5" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="row" style="padding-left: 10px;">
+								<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+								<strong>We offer following test series:</strong>
+								<a href="#"><h4>XI (Physics,Chemistry,Maths)</h4></a>
+								<a href="#"><h4>XII State Board (Physics,Chemistry,Maths)</h4></a>
+								<a href="#"><h4>XII CBSE (Physics,Chemistry,Maths)</h4></a>
+								<a href="#"><h4>Test series for CET 2019</h4></a>
+								<a href="#"><h4>Test Series for JEE 2019</h4></a>
+								<a href="#"><h4>CA Intermediate</h4></a>
+								<a href="#"><h4>CA Foundation</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" style="background-color: #01bafd">
+						<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+						<div width="100%">
+							<h3 class="panel-title">Achievments<i class="indicator glyphicon glyphicon-chevron-down pull-right"></i></h3>
+						</div>
+						</a>
+					</div>
+					<div id="collapse3" class="panel-collapse collapse">
+						<div class="panel-body" style="background-color: #333;">
+							<div class="row">
+								<div class="col-md-6 col-1 text-center">
+									<div class="double-icon-img hidden-xs">
+										<img src="RCMimages/trophy.png" />
+									</div>
+									<div class="row-content">
+										<h2><strong>30%</strong>&nbsp;Students<br/><br/>
+											of class XII<br/><br/>
+											above&nbsp;<strong>90%</strong></h2><br/>
+										<button class="btn btn-primary">View Result</button>
+									</div>
+								</div>
+								<div class="col-md-6 col-2 text-center">
+									<div class="double-icon-img hidden-xs">
+										<img src="RCMimages/trophy.png" />
+									</div>
+									<div class="row-content">
+										<h2><strong>10</strong>&nbsp;Students<br/><br/>
+											in <strong>top 100</strong><br/>
+											of<br/>CA Intermdiate</h2><br/>
+										<button class="btn btn-primary">View Result</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!-- footer -->	
+<div class="container-fluid">
+    <div class="row">
+            <footer class="nb-footer">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12">
+            <div class="about">
+                <!-- <img src="RCMimages/images/logo.png" class="img-responsive center-block" alt=""> -->
+                <h2 style="color: #999;"><strong>RCM Institute</strong></h2>
+                <p>RCM institute is coaching institute for the preperation of 10/12 , CA Intermediate, CA Foundation.To our students ,we impart value based education and move them to their successful carrrier.</p> 
+                <!-- <p>Bootstrap Footer example snippets with CSS, Javascript and HTML. Code example of bootstrap-3 footer using HTML, Javascript, jQuery, and CSS. 5 Beautiful and Responsive Footer Templates. Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p> -->
+
+                <div class="social-media">
+                    <ul class="list-inline">
+                        <li><a href="#facebook" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#twitter" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#googleplus" title="googleplus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#linkedin" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Help Center</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Admissions</h2>
+                <ul class="list-unstyled">
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i> Admission Process</a></li>
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i>Apply Online or Apply offline</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Contact Us</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Admission Enquiry</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> General Enquiry</a></li>
+                    <li><a href="aboutrcm.html#feedback" onclick="Feedback();" title=""> Feedback</a></li>
+                    <li>
+                      
+                      <form id="feedback"  method="post" style="display: none">
+                        <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required="required" title="Email Address">
+                        </div>
+                        <div class="form-group">
+                        <textarea class="form-control" id="text" name="feedback" row="3" col="50" title="Gives Your Feedback" style="resize: none"></textarea>
+                        </div>
+                        <div class="form-group">
+                        <button class="btn btn-primary" onclick="closeFeedback();" type="button">submit</button>
+                        </div>
+                      </form>
+
+                      
+                    </li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            
+            </div>
+            </div>
+
+            <section class="copyright">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12" style="text-align: center">
+            <p>Designed By Vchip Technology </p>
+            </div>
+            
+            </div>
+            </section>
+            </footer>
+
+    </div>
+
+</div>
+<!-- page script -->
+<script>
+function toggleChevron(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find("i.indicator")
+        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+}
+$('#accordion').on('hidden.bs.collapse', toggleChevron);
+$('#accordion').on('shown.bs.collapse', toggleChevron);
+</script>
+
+<!-- feedback script -->
+<script>
+var x=0;
+function Feedback(){
+  if(x==0){
+    document.getElementById("text").value="";
+    document.getElementById("email").value="";
+    document.getElementById("feedback").style.display="block";
+    x=1;
+  }
+  else{
+    document.getElementById("feedback").style.display="none";
+    x=0;
+  }
+}
+function closeFeedback(){
+  document.getElementById("feedback").style.display="none";
+}
+</script>
+
+<!-- overlay script -->
+<script>
+var modal = document.getElementById('id01');
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+#content2{
+	margin:20px 0px;
+	background-color: rgba(217,237,247,0.6);
+	z-index: 1;
+	/*background: rgba(0, 0, 0, 0.9);*/
+}
+#content2 a{
+	color: #555;
+	
+}
+#content2 img{
+	width:140px;
+	height:100px;
+}
+/*#content2 div:hover{
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 1; 
+}*/
+.innerContent2{
+	width:33.3%;
+	font-size: 30px;
+	text-align: center;
+}
+#tagline{
+	background-color: rgba(0,0,0,0.9);
+	color: white;
+	width:100%;
+	min-height: 50px;
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+.panel{
+	margin:10px 20px;
+}
+.heading{
+	color: #FD2424;
+	font-size: 18px;
+	
+}
+.implink{
+	padding-bottom: 10px;
+	
+}
+.implink a,.implink2 a{
+	color: black;
+	font-weight: bold;
+	font-size: 14px;
+}
+.implink a:hover{
+	color: green;
+	font-size: 18px;
+}
+.scrollable-panel{
+	height: 190px;
+	overflow:auto;
+}
+.heading2{
+	color:green;
+	font-size: 18px;
+}
+/*.implink2 a:hover{
+	color: #01bafd;
+	font-size: 18px;
+}*/
+.announcementDiv{
+	width:70%;
+	margin:auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #f2f2f2;
+	text-align: center;
+}
+.announcementDiv:hover{
+	background-color: #01bafd;
+	color:white;
+}
+/*@media only screen and (max-width: 350px){
+	.navbar-brand{
+		padding: 5px;
+	}
+}*/
+
+@media only screen and (max-width: 780px){
+	.innerContent2{
+		font-size:22px;
+	}
+}
+@media only screen and (max-width: 630px){
+	.innerContent2{
+		font-size:18px;
+	}
+	#content2 img{
+		width:100px;
+		height:60px;
+	}
+}
+@media only screen and (max-width: 500px){
+	.innerContent2{
+		font-size:14px;
+	}
+}
+@media only screen and (max-width: 990px){
+	.getTouch{
+		width:50%;
+		margin:auto;
+	}
+
+}
+@media only screen and (max-width: 730px){
+	.getTouch{
+		width:60%;
+		
+		margin:auto;
+	}
+	/*#r2{
+		height:360px;
+	}*/
+}@media only screen and (max-width: 500px){
+	.getTouch{
+		width:70%;
+		
+		margin:auto;
+	}
+
+	/*#r2{
+		height:300px;
+	}*/
+}
+@media only screen and (max-width: 430px){
+	.getTouch{
+		width:100%;
+		
+		margin:auto;
+	}
+}
+@media only screen and (max-width:766px){
+	#tagline{
+		font-size: 24px;
+	}
+}
+@media only screen and (max-width:380px){
+	#tagline{
+		font-size: 20px;
+	}
+}

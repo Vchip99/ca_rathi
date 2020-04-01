@@ -1,0 +1,1019 @@
+<!doctype html>
+<html>
+<head>
+<title>Performance of Students</title>
+<meta name="description" content="Basic Info ">
+<meta charset="UTF-8">
+<meta name="keywords" content="RCM,rcm,performance of students,performance of students in studies">
+<meta name="author" content="Aaradhya Deshpande">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- commonstyling -->
+<link rel="stylesheet" href="RCMcommon.css">
+
+<style type="text/css">
+
+	.container{
+		margin-top: 10px;
+	}
+
+	.bar-graph {
+  		padding: 0;
+  		width: 100%;
+  		display: flex;
+ 		align-items: flex-end;
+ 	 	height: 425px;
+  		margin: 0;
+	}
+	.buttons{
+		float:right;
+
+	}
+
+	 button{
+	  color: white;
+	  background-color: #01bafd;
+	  opacity: 0.8
+	}
+	 .buttons:hover button{
+	  opacity: 1;
+	}
+
+
+	#details th{
+		background-color: #01bafd;
+		color: #fff;
+	}
+
+	#jee2,#details{
+		display: none;
+	}
+
+	.bar-graph li {
+ 		display: block;
+  		padding: 1.5625rem 0;
+  		position: relative;
+  		text-align: center;
+  		vertical-align: bottom;
+  		border-radius: 4px 4px 0 0;
+  		max-width: 10%;
+  		/*height: 100%;*/
+  		margin: 0 1.8% 0 0;
+  		flex: 1 1 15%;
+	}
+
+	.bar-graph .bar-graph-axis {
+  		flex: 1 1 8%;
+  		display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+	}
+
+	.bar-graph .bar-graph-label {
+		margin: 0;
+  		background-color: none;
+  		/*color: #8a8a8a;*/
+
+  		position: relative;
+	}
+
+	/*@media print, screen and (min-width: 40em) {
+  		.bar-graph .bar-graph-label:before, .bar-graph .bar-graph-label:after {
+    		content: "";
+    		position: absolute;
+    		border-bottom: 1px dashed #8a8a8a;
+    		top: 0;
+    		left: 0;
+    		height: 50%;
+    		width: 20%;
+  		}
+	}
+
+	@media print, screen and (min-width: 40em) and (min-width: 64em) {
+  		.bar-graph .bar-graph-label:before, .bar-graph .bar-graph-label:after {
+    		width: 30%;
+  		}
+	}
+
+	@media print, screen and (min-width: 40em) {
+  		.bar-graph .bar-graph-label:after {
+    		left: auto;
+    		right: 0;
+  		}
+	}*/
+
+	.bar-graph .percent {
+  		letter-spacing: -3px;
+  		opacity: 0.4;
+  		width: 100%;
+  		font-size: 1.875rem;
+  		position: absolute;
+	}
+
+	@media print, screen and (min-width: 40em) {
+  		.bar-graph .percent {
+    		font-size: 3.875rem;
+  		}
+	}
+
+	.bar-graph .percent span {
+  		font-size: 1.875rem;
+	}
+
+	.bar-graph .description {
+  		font-weight: 800;
+  		opacity: 1.0;
+ 		text-transform: uppercase;
+  		width: 100%;
+  		font-size: 20px;
+  		bottom: -30px;
+  		position: absolute;
+  		/*font-size: 1rem;*/
+  		overflow: hidden;
+	}
+
+	.bar-graph .bar.primary {
+  		border: 1px solid #1779ba;
+  		background: linear-gradient(#2196e3, #1779ba 70%);
+  		height: 95%;
+  		animation: graph1 0.8s;
+	}
+
+	@keyframes graph1{
+		from{height: 0%;}
+		to{height: 95%;}
+	}
+
+	.bar-graph .bar.secondary {
+  		border: 1px solid #767676;
+  		background: linear-gradient(#909090, #767676 70%);
+  		height: 90%;
+  		animation: graph2 0.8s;
+	}
+
+	@keyframes graph2{
+		from{height: 0%;}
+		to{height: 90%;}
+	}
+
+	.bar-graph .bar.success {
+  		border: 1px solid #3adb76;
+  		background: linear-gradient(#65e394, #3adb76 70%);
+  		height: 80%;
+  		animation: graph3 0.8s;
+	}
+
+	@keyframes graph3{
+		from{height: 0%;}
+		to{height: 80%;}
+	}
+
+	.bar-graph .bar.warning {
+  		border: 1px solid #ffae00;
+  		background: linear-gradient(#ffbe33, #ffae00 70%);
+  		height: 75%;
+  		animation: graph4 0.8s;
+	}
+
+	@keyframes graph4{
+		from{height: 0%;}
+		to{height: 75%;}
+	}
+
+	.bar-graph .bar.alert {
+  		border: 1px solid #cc4b37;
+  		background: linear-gradient(#d67060, #cc4b37 70%);
+  		height: 70%;
+  		animation: graph5 0.8s;
+	}
+
+	@keyframes graph5{
+		from{height: 0%;}
+		to{height: 70%;}
+	}
+
+	.bar-graph .bar.danger {
+  		border: 1px solid #cc4b37;
+  		background: linear-gradient(#4caf50, #4bbe25 70%);
+  		height: 80%;
+  		animation: graph6 0.8s;
+	}
+
+	@keyframes graph6{
+		from{height: 0%;}
+		to{height: 80%;}
+	}
+
+	@media only screen and (max-width: 767px){
+		.btn-primary{
+			margin-right: 20px;
+		}
+	}
+
+	@media only screen and (max-width: 991px){
+		.top{
+			margin-top: 10px;
+		}
+	}
+
+	.test{
+		float: left;
+		margin-top: 30px;
+		margin-left: 35px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	@media only screen and (min-width: 768px){
+		#x{
+			margin-left: 28%;
+		}
+	}
+
+	@media only screen and (min-width: 500px) and (max-width: 767px){
+		#x{
+			margin-left: 20%;
+		}
+	}
+
+	@media only screen and (max-width: 499px){
+		#x{
+			margin-left: 10%;
+		}
+	}
+#smalldetails{
+	display:none;
+}
+ .block2{
+  margin:0px;
+  text-align: center;
+  border:1px solid #d3e0e9;
+  padding:10px 0px;
+  display: none;
+}
+.block2 .innerBlock2{
+  border-bottom: 1px solid #d3e0e9;
+  margin:10px;
+
+}
+
+</style>
+
+</head>
+
+<body onresize="fun1()">
+<div id="myNav" class="overlay">
+    
+      <div class="overlay-content">
+        
+        <div class="col-sm-6 col-sm-offset-2 col-1" >
+        
+            <div class="form-wrap" id="id01" style="z-index:25;margin:auto;">
+                <div class="row" id="r2">
+                    <form method="POST" >
+                      <div class="form-group" style=" color: white;border-radius: 4px;">
+                        <ul class="nav nav-tabs">
+                        <li class="active col-xs-5" ><a href="#signin" data-toggle="tab" style="text-align: center"><h3><strong>Sign In</strong></h3></a></li>
+                        
+                        <li class="col-xs-5" style="text-align: center;"><a href="#signup" data-toggle="tab"><h3><strong>Sign Up</strong></h3></a></li>
+                        <li class="col-xs-2"><span onclick="closeNav()"  class="close" title="Close Modal">&times;</span></li>
+                        
+                        </ul>
+                      </div>
+                      <div class="tab-content"> 
+                        <div id="signin" class="tab-pane fade in active">
+                          <div class="form-group">
+                              <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" name="password" placeholder="Password" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                          <div style="float:left;width:50%">
+                            <button type="submit" class="btn" style="width: 100%">Sign In</button>
+                          </div>
+                          <div style="float: right;width:50%;text-align: center;color:white;">
+                            <a href="#" style="font-size: 14px"><strong>Forgot Password?</strong></a> 
+                          </div>
+                          </div>
+                        </div>
+                        <div id="signup" class="tab-pane fade">
+                          <div class="form-group">
+                              <input type="text" name="name" placeholder="User Name" class="form-control" />
+                          </div>
+                          <!-- <div class="form-group">
+                              <input type="text" name="mobileNo" placeholder="Mobile No." class="form-control" />
+                          </div> -->
+                          <div class="form-group">
+                              <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" name="password" placeholder="Password" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                          <div style="float:left;width:50%">
+                            <button type="submit" class="btn" style="width: 100%">Sign Up</button>
+                          </div>
+                          <div style="float: right;width:50%;text-align:center;color:white;">
+                            <a href="#" style="font-size: 14px"><strong>Already Member?</strong></a> 
+                          </div>
+                          </div>
+                        </div>
+                      </div>   
+                    </form>
+      
+                </div>
+            </div>
+                
+        </div>
+      </div>
+</div>
+<!-- nav1 -->
+         <nav class="navbar navbar-inverse navbar-fixed-top" id="nav1" >
+                <div class="container-fluid">
+                    <div class="navbar-header" style="padding-bottom: 10px;">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                        <span class="caret" style="color: white"></span>
+                        </button>
+                        <a href="RCMhome.html" class="navbar-brand"><span class="glyphicon glyphicon-home"></span>Home</a>
+                        
+                        
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="aboutrcm.html">About Us</a></li>
+                        <li><a href="contactUs.html"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
+                        
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a onclick="openNav();" style="cursor:pointer"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                        
+                        
+                    </ul>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </nav> 
+ <!-- nav2 -->       
+            <nav class="navbar navbar-default navbar-fixed-top" id="nav2" >
+                <div class="container-fluid">
+                    <div class="navbar-header" style="margin-right: 40px;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                     </button>
+                    <a class="navbar-brand" href="#">RCM <span id="institute" >Institute</span></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar" >
+                        <ul class="nav navbar-nav navbar-right">
+                            <!-- <li><a href="courses.html"><span class="glyphicon glyphicon-"></span>Courses</a></li> -->
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-"></span> Courses<span class="caret"></span></a>
+                            <ul class="dropdown-menu" style="margin-right: 75%">
+                              <li ><a href="RCM10.html">10/12</a></li>
+                              <li ><a href="RCM10.html">CA Intermediate</a></li>
+                              <li ><a href="RCM10.html">CA Foundation</a></li>
+                              <!-- <li ><a href="#logout"><span class="glyphicon glyphicon-log-out"></span></a></li> -->
+                            </ul>
+                            </li>
+                            <li><a href="RCMtestseries.html">Test Series</a></li>
+                            <li class="navbarHover"><a href="batches.html">Batches</a></li>
+                        
+                            <li><a href="RCMfaq.html"><span class="glyphicon glyphicon-"></span>FAQ's</a></li>
+                            <li><a href="RCMcarrer.html"><span class="glyphicon glyphicon-"></span>Carrer</a></li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+                            <ul class="dropdown-menu" style="margin-right: 75%">
+                              <li ><a href="student_panel.html">Student</a></li>
+                              <li ><a href="parent_panel.html">Parent</a></li>
+                              <li ><a href="lecturer_panel.html">Lecturer</a></li>
+                              <li ><a href="RCMadminPanel2.html">Admin</a></li>
+                              
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+<!-- content -->
+	<div class="container" style="margin-top: 130px;">
+		<div class="row" style="padding-left: 10px;">
+			<h1>Performance</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<select name="course" class="form-control" id="course" onchange="hideoption(this)">
+              		<option value="Select Course" selected="selected">Select Course</option>
+            		<option value="XI & XII">XI & XII</option>
+            		<option value="CA Intermediate">CA Intermediate</option>
+            		<option value="CA Foundation">CA Foundation</option>
+            		<option value="All">All</option>
+          		</select>
+			</div>
+			<div class="col-md-4 top">
+				<select name="subcourse" class="form-control" id="sub">
+              		<option value="Select Subcourse" selected="selected">Select Subcourse</option>
+            		<option value="Subcourse1">Subcourse1</option>
+            		<option value="Subcourse2">Subcourse2</option>
+            		<option value="Subcourse3">Subcourse3</option>
+            		<option value="All">All</option>
+          		</select>
+			</div>
+			<!-- <div class="col-md-3 top">
+				<select name="Test" class="form-control" id="t" onchange="showDiv(this)">
+              		<option value="Select Course" selected="selected">Select Test</option>
+            		<option id="t1" value="Test-1">Test-1</option>
+            		<option id="t2" value="Test-2">Test-2</option>
+            		<option id="t3" value="Test-3">Test-3</option>
+            		<option id="t4" value="Test-4">Test-4</option>
+            		<option id="t5" value="Test-5">Test-5</option>
+            		<option id="t6" value="Test-6">Test-6</option>
+            		<option id="all" value="All">All</option>
+          		</select>
+			</div> -->
+		</div><br/>
+		<div class="row" id="jee2" style="border: 2px solid #d3e0e9;">
+			<div class="test">
+				<div><p>P</p></div>
+				<div><p>E</p></div>
+				<div><p>R</p></div>
+				<div><p>F</p></div>
+				<div><p>O</p></div>
+				<div><p>R</p></div>
+				<div><p>M</p></div>
+				<div><p>A</p></div>
+				<div><p>N</p></div>
+				<div><p>C</p></div>
+				<div><p>E</p></div>
+			</div>
+			
+			<div class="row" style="margin-top: 40px;margin-left: 110px;"><p style="font-weight: bold;font-size: 18px;"><span>&lt;----</span>T E S T<span>----&gt;</span></p></div>
+		</div><br/>
+		<div class="row" id="mina" style="border: 2px solid #d3e0e9;">
+			<div class="test">
+				<div><p>P</p></div>
+				<div><p>E</p></div>
+				<div><p>R</p></div>
+				<div><p>F</p></div>
+				<div><p>O</p></div>
+				<div><p>R</p></div>
+				<div><p>M</p></div>
+				<div><p>A</p></div>
+				<div><p>N</p></div>
+				<div><p>C</p></div>
+				<div><p>E</p></div>
+			</div>
+			<div style="margin-left: 100px;">
+				<ul class="bar-graph">
+	 				<!-- <li class="bar-graph-axis">
+	    				<div class="bar-graph-label">100%</div>
+	    				<div class="bar-graph-label">80%</div>
+	    				<div class="bar-graph-label">60%</div>
+	    				<div class="bar-graph-label">40%</div>
+	   					<div class="bar-graph-label">20%</div>
+	    				<div class="bar-graph-label">0%</div> 
+	  				</li> -->
+	  				<li class="bar primary" title="95">
+	    				<div class="percent">95<span>%</span></div><br/>
+	    				<div class="description">1</div>
+	  				</li>
+	  				<li class="bar success" title="80">
+	    				<div class="percent">80<span>%</span></div><br/>
+	    				<div class="description">2</div>
+	  				</li>
+	  				<li class="bar secondary" title="90">
+	    				<div class="percent">90<span>%</span></div><br/>
+	    				<div class="description">3</div>
+	  				</li>
+	  				<li class="bar alert" title="70">
+	    				<div class="percent">70<span>%</span></div><br/>
+	    				<div class="description">4</div>
+	  				</li>
+	  				<li class="bar warning" title="75">
+	    				<div class="percent">75<span>%</span></div><br/>
+	    				<div class="description">5</div>
+	  				</li>
+	  				<li class="bar danger" title="80">
+	    				<div class="percent">80<span>%</span></div><br/>
+	    				<div class="description">6</div>
+	  				</li>
+				</ul>
+				<div id="x" style="margin-top: 40px;"><p style="font-weight: bold;font-size: 14px"><span>&lt;----</span>&nbsp;&nbsp;T E S T&nbsp;&nbsp;<span>----&gt;</span></p></div>
+			</div>
+		</div><br/>
+		
+		<div class="row">
+			<div class="buttons">
+			<button type="submit" id="show" class="btn btn-lg" onclick="func()" >Show Details</button><br><br>
+			<a href="parent_panel.html"><button type="submit" id="show" class="btn btn-lg">&lt;&nbsp;back&nbsp;&nbsp;</button></a>
+			</div>
+		</div><br/>
+		<div class="row block1" id="details">
+			<table class="table table-bordered">
+				<thead>
+					<th>Test</th>
+					<th>Date</th>
+					<th>Subject1</th>
+					<th>Subject2</th>
+					<th>Subject3</th>
+					<th>Total</th>
+					<th>Rank</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Test-1</td>
+						<td>01/07/2018</td>
+						<td>60</td>
+						<td>60</td>
+						<td>60</td>
+						<td>180</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>Test-2</td>
+						<td>01/07/2018</td>
+						<td>60</td>
+						<td>60</td>
+						<td>60</td>
+						<td>180</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>Test-3</td>
+						<td>01/07/2018</td>
+						<td>60</td>
+						<td>60</td>
+						<td>60</td>
+						<td>180</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>Test-4</td>
+						<td>01/07/2018</td>
+						<td>60</td>
+						<td>60</td>
+						<td>60</td>
+						<td>180</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>Test-5</td>
+						<td>01/07/2018</td>
+						<td>60</td>
+						<td>60</td>
+						<td>60</td>
+						<td>180</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>Test-6</td>
+						<td>01/07/2018</td>
+						<td>60</td>
+						<td>60</td>
+						<td>60</td>
+						<td>180</td>
+						<td>100</td>
+					</tr>
+				</tbody>
+			</table><br/>
+			<div class="buttons">
+			<button type="submit" class="btn btn-lg" onclick="func2()" >Hide Details</button>
+			<br><br></div>
+		</div>
+		<div class="row block2" id="smallDetails">
+			
+		      <div class="row innerBlock2">
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Test Name:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>Test1</p>
+		        </div>
+		        </div>
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Date:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>10/12/2018</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject1:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject2:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject3:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Total:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>180</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Rank:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>20</p>
+		        </div>
+		        </div>
+		  	</div>    	
+		    <div class="row innerBlock2">
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Test Name:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>Test1</p>
+		        </div>
+		        </div>
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Date:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>10/12/2018</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject1:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject2:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject3:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Total:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>180</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Rank:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>20</p>
+		        </div>
+		        </div>
+		  	</div>
+		  	<div class="row innerBlock2">
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Test Name:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>Test1</p>
+		        </div>
+		        </div>
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Date:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>10/12/2018</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject1:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject2:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject3:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Total:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>180</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Rank:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>20</p>
+		        </div>
+		        </div>
+		  	</div>
+		  	<div class="row innerBlock2">
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Test Name:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>Test1</p>
+		        </div>
+		        </div>
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Date:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>10/12/2018</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject1:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject2:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Subject3:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>60</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Total:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>180</p>
+		        </div>
+		        </div>
+
+		        <div class="row">
+		        <div style="float:left;width: 50%;">
+		          <p><strong>Rank:</strong></p>
+		        </div>
+		        <div style="float:left;width: 50%;">
+		            <p>20</p>
+		        </div>
+		        </div>
+		  	</div>
+		  	<br>
+		  	<div class="buttons">
+			<button type="submit" class="btn btn-lg" onclick="func2()" >Hide Details</button>
+			</div>
+		
+		<br/>
+		</div>
+		
+		
+	</div>
+<!-- footer -->	
+<div class="container-fluid">
+    <div class="row">
+            <footer class="nb-footer">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12">
+            <div class="about">
+                <!-- <img src="images/logo.png" class="img-responsive center-block" alt=""> -->
+                <h2 style="color: #999;"><strong>RCM Institute</strong></h2>
+                <p>RCM institute is coaching institute for the preperation of 10/12 , CA Intermediate, CA Foundation.To our students ,we impart value based education and move them to their successful carrrier.</p> 
+                <!-- <p>Bootstrap Footer example snippets with CSS, Javascript and HTML. Code example of bootstrap-3 footer using HTML, Javascript, jQuery, and CSS. 5 Beautiful and Responsive Footer Templates. Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p> -->
+
+                <div class="social-media">
+                    <ul class="list-inline">
+                        <li><a href="#facebook" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#twitter" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#googleplus" title="googleplus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#linkedin" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Help Center</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Admissions</h2>
+                <ul class="list-unstyled">
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i> Admission Process</a></li>
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i>Apply Online or Apply offline</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Contact Us</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Admission Enquiry</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> General Enquiry</a></li>
+                    <li><a href="RCMperformance.html#feedback" onclick="Feedback();" title=""> Feedback</a></li>
+                    <li>
+                      
+                      <form id="feedback"  method="post" style="display: none">
+                        <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required="required" title="Email Address">
+                        </div>
+                        <div class="form-group">
+                        <textarea class="form-control" id="text" name="feedback" row="3" col="50" title="Gives Your Feedback" style="resize: none"></textarea>
+                        </div>
+                        <div class="form-group">
+                        <button class="btn btn-primary" onclick="closeFeedback();" type="button">submit</button>
+                        </div>
+                      </form>
+
+                      
+                    </li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            
+            </div>
+            </div>
+
+            <section class="copyright">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12" style="text-align: center">
+            <p>Designed By Vchip Technology </p>
+            </div>
+            
+            </div>
+            </section>
+            </footer>
+
+    </div>
+
+</div>
+
+<!-- feedback script -->
+<script>
+var x=0;
+function Feedback(){
+  if(x==0){
+    document.getElementById("text").value="";
+    document.getElementById("email").value="";
+    document.getElementById("feedback").style.display="block";
+    x=1;
+  }
+  else{
+    document.getElementById("feedback").style.display="none";
+    x=0;
+  }
+}
+function closeFeedback(){
+  document.getElementById("feedback").style.display="none";
+}
+</script>
+<!-- overlay script -->
+<script>
+var modal = document.getElementById('id01');
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+<!-- pagescript -->
+	<script type="text/javascript">
+	var count=0;
+		function func(){
+      if(screen.width>810){
+			document.getElementById("details").style.display="block";
+			document.getElementById("show").style.display="none";
+			count=1;
+		}
+    else{
+     document.getElementById("smallDetails").style.display="block";
+      document.getElementById("show").style.display="none";
+      count=1; 
+    }
+    }
+		function func2(){
+			document.getElementById("details").style.display="none";
+			document.getElementById("show").style.display="block";
+			document.getElementById("smallDetails").style.display="none";
+			count=0;
+		}
+		
+		function fun1(){
+			if(count==1){
+				if(screen.width<=810){
+					document.getElementById("details").style.display="none";
+					document.getElementById("smallDetails").style.display="block";
+				}
+				else{
+					document.getElementById("details").style.display="block";
+					document.getElementById("smallDetails").style.display="none";	
+				}
+			}
+		}
+	</script>
+
+</body>
+
+</html>

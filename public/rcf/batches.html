@@ -1,0 +1,1691 @@
+<!doctype html>
+<html>
+<head>
+<title>Batches</title>
+<meta name="description" content="Student Info ">
+<meta charset="UTF-8">
+<meta name="keywords" content="RCM,rcm,student,panel">
+<meta name="author" content="Aaradhya Deshpande">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- common style -->
+<link rel="stylesheet" href="RCMcssFiles/RCMcommon.css">
+
+<style type="text/css">
+
+
+/*pagestyling*/
+
+	.container{
+		margin-top: 10px;
+	}
+
+	th{
+		background-color: #d9edf7;
+	}
+
+	.bottom{
+		border-bottom: 2px solid #999;
+	}
+
+	a{
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	@media only screen and (min-width: 470px){
+		#jee,#cai,#caf,#con1{
+			display: none;
+		}
+	}
+
+	.left{
+		float: left;
+		width: 50%;
+		text-align: left;
+		padding-left: 10px;
+	}
+
+	.right{
+		float: right;
+		width: 50%;
+		text-align: center;
+	}
+
+	.fw{
+		font-weight: bold;
+	}
+
+	.arrow{
+		float: right;
+		font-weight: normal;
+	}
+
+	.main{
+		display: none;
+		border: 2px solid #999;
+		margin: 10px;
+		margin-bottom: 20px;
+	}
+
+	.subrow{
+		border-bottom: 1px solid #d3e0e9;
+	}
+
+	@media only screen and (max-width: 469px){
+		.table-responsive,#con{
+			display: none;
+		}
+
+		#jee,#cai,#caf{
+			display: none;
+		}
+
+		#con1,#sel,.main{
+			display: block;
+		}
+	}
+
+	.text-center{
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.panel-title{
+		color:white;
+	}
+</style>
+
+</head>
+
+<body>
+
+<!-- overlay -->
+<div id="myNav" class="overlay">
+    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+    <div class="overlay-content">
+      
+      <div class="col-sm-6 col-sm-offset-2 col-1" >
+      
+        <div class="form-wrap" id="id01" style="z-index:25;margin:auto;">
+          <div class="row" id="r2">
+            <form method="POST" >
+              <div class="form-group" style=" color: white;border-radius: 4px;">
+                <ul class="nav nav-tabs">
+                <li class="active col-xs-5" ><a href="#signin" data-toggle="tab" style="text-align: center"><h3><strong>Sign In</strong></h3></a></li>
+                
+                <li class="col-xs-5" style="text-align: center;"><a href="#signup" data-toggle="tab"><h3><strong>Sign Up</strong></h3></a></li>
+                <li class="col-xs-2"><span onclick="closeNav()"  class="close" title="Close Modal">&times;</span></li>
+                <!-- <li><span onclick="closelog1()" class="close" title="Close Modal">&times;</span></li> -->
+                </ul>
+              </div>
+              <div class="tab-content"> 
+                <div id="signin" class="tab-pane fade in active">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                <div style="float:left;width:50%">
+                  <button type="submit" class="btn" style="width: 100%">Sign In</button>
+                </div>
+                <div style="float: right;width:50%;text-align: center;color:white;">
+                  <a href="#" style="font-size: 14px"><strong>Forgot Password?</strong></a> 
+                </div>
+                </div>
+              </div>
+              <div id="signup" class="tab-pane fade">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="User Name" class="form-control" />
+                </div>
+                <!-- <div class="form-group">
+                    <input type="text" name="mobileNo" placeholder="Mobile No." class="form-control" />
+                </div> -->
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                <div style="float:left;width:50%">
+                  <button type="submit" class="btn" style="width: 100%">Sign Up</button>
+                </div>
+                <div style="float: right;width:50%;text-align:center;color:white;">
+                  <a href="#" style="font-size: 14px"><strong>Already Member?</strong></a> 
+                </div>
+                </div>
+              </div>
+            </div>   
+            </form>
+    
+        </div>
+      </div>
+      <!-- <a href="#" id="icon1"style="font-size: 200px"><span class="glyphicon glyphicon-user" onclick="openlog1()"></span></a> --> 
+      </div>
+    </div>
+</div>
+
+
+  
+ <!-- nav1 -->   
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="nav1" >
+        <div class="container-fluid">
+            <div class="navbar-header" style="padding-bottom: 10px;">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                <span class="caret" style="color: white"></span>
+                </button>
+                <a href="index.html" class="navbar-brand"><span class="glyphicon glyphicon-home"></span>Home</a>
+              
+              
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar1">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="aboutrcm.html">About Us</a></li>
+              <li><a href="contactUs.html"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
+              
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a onclick="openNav();" style="cursor:pointer"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+              
+              
+            </ul>
+            </div>
+            
+            
+            
+        </div>
+      </nav>
+    
+<!--  nav2 -->
+      <nav class="navbar navbar-default navbar-fixed-top" id="nav2" >
+        <div class="container-fluid">
+            <div class="navbar-header" style="margin-right: 40px;">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+             </button>
+              <a class="navbar-brand" href="index.html">RCM <span id="institute" >Institute</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" >
+              <ul class="nav navbar-nav navbar-right">
+                  <!-- <li><a href="courses.html"><span class="glyphicon glyphicon-"></span>Courses</a></li> -->
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-"></span> Courses<span class="caret"></span></a>
+                  <ul class="dropdown-menu" style="margin-right: 75%">
+                    <li ><a href="RCM10.html">10/12</a></li>
+                    <li ><a href="RCM10.html">CA Intermediate</a></li>
+                    <li ><a href="RCM10.html">CA Foundation</a></li>
+                    <!-- <li ><a href="#logout"><span class="glyphicon glyphicon-log-out"></span></a></li> -->
+                  </ul>
+                  </li>
+                  <li class="navbarHover"><a href="RCMtestseries.html">Test Series</a></li>
+                  <li class="navbarHover"><a href="batches.html">Batches</a></li>
+              
+                <li class="navbarHover"><a href="RCMfaq.html"><span class="glyphicon glyphicon-"></span>FAQ's</a></li>
+                  <li class="navbarHover"><a href="RCMcarrer.html"><span class="glyphicon glyphicon-"></span>Carrer</a></li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+                  <ul class="dropdown-menu" style="margin-right: 75%">
+                    <li ><a href="student_panel.html">Student</a></li>
+                    <li ><a href="parent_panel.html">Parent</a></li>
+                    <li ><a href="lecturer_panel.html">Lecturer</a></li>
+                    <li ><a href="RCMadminPanel2.html">Admin</a></li>
+                    
+                  </ul>
+              </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+<!-- content -->
+	<div class="container" id="con" style="margin-top:120px;">
+		<div class="row" style="padding-left: 10px">
+			<h1>Batches</h1>
+		</div>
+		<div class="row" >
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-primary">
+					<div class="panel-heading" style="background-color: #01bafd;color: white;">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="accordian-toggle">
+						<div width="100%">
+							<h3 class="panel-title">XI & XII<i class="indicator glyphicon glyphicon-chevron-up  pull-right"></i> </h3>
+						</div>
+						</a>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<div class="row table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Batch Name</th>
+											<th>Subject</th>
+											<th>Duration</th>
+											<th>Tutor</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="3" style="border-bottom: 2px solid #999;">A1</td>
+											<td>Subject1</td>
+											<td>11:00am to 12:30pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td>Subject2</td>
+											<td>12:45pm to 02:15pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+										<tr class="bottom">
+											<td>Subject3</td>
+											<td>02:30pm to 04:00pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr>
+											<td rowspan="3" class="bottom">B1</td>
+											<td>Subject2</td>
+											<td>11:00am to 12:30pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+										<tr>
+											<td>Subject3</td>
+											<td>12:45pm to 02:15pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr class="bottom">
+											<td>Subject1</td>
+											<td>02:30pm to 04:00pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td rowspan="3">C1</td>
+											<td>Subject3</td>
+											<td>11:00am to 12:30pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr>
+											<td>Subject1</td>
+											<td>12:45pm to 02:15pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td>Subject2</td>
+											<td>02:30pm to 04:00pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading" style="color:white;background-color: #01bafd;">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="accordian-toggle">
+						<div width="100%">
+							<h3 class="panel-title">CA Intermediate<i class="indicator glyphicon glyphicon-chevron-down pull-right"></i> </h3>
+						</div>
+						</a>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="row table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Batch Name</th>
+											<th>Subject</th>
+											<th>Duration</th>
+											<th>Tutor</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="3" style="border-bottom: 2px solid #999;">P1</td>
+											<td>Subject1</td>
+											<td>11:00am to 12:30pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td>Subject2</td>
+											<td>12:45pm to 02:15pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+										<tr class="bottom">
+											<td>Subject3</td>
+											<td>02:30pm to 04:00pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr>
+											<td rowspan="3" class="bottom">Q1</td>
+											<td>Subject2</td>
+											<td>11:00am to 12:30pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+										<tr>
+											<td>Subject3</td>
+											<td>12:45pm to 02:15pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr class="bottom">
+											<td>Subject1</td>
+											<td>02:30pm to 04:00pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td rowspan="3">R1</td>
+											<td>Subject3</td>
+											<td>11:00am to 12:30pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr>
+											<td>Subject1</td>
+											<td>12:45pm to 02:15pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td>Subject2</td>
+											<td>02:30pm to 04:00pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading" style="color:white;background-color: #01bafd;">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="accordian-toggle">
+						<div   width="100%">
+							<h3 class="panel-title">CA Foundation<i class="indicator glyphicon glyphicon-chevron-down pull-right"></i> </h3>
+						</div>
+						</a>	
+					</div>
+					<div id="collapse3" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="row table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Batch Name</th>
+											<th>Subject</th>
+											<th>Duration</th>
+											<th>Tutor</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="3" style="border-bottom: 2px solid #999;">X1</td>
+											<td>Subject1</td>
+											<td>05:00pm to 06:30pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td>Subject2</td>
+											<td>05:45pm to 07:15pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+										<tr class="bottom">
+											<td>Subject3</td>
+											<td>07:30pm to 09:00pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr>
+											<td rowspan="3" class="bottom">Y1</td>
+											<td>Subject2</td>
+											<td>04:00pm to 05:30pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+										<tr>
+											<td>Subject3</td>
+											<td>05:45pm to 07:15pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr class="bottom">
+											<td>Subject1</td>
+											<td>07:30pm to 09:00pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td rowspan="3">Z1</td>
+											<td>Subject3</td>
+											<td>04:00pm to 05:30pm</td>
+											<td>Dr.R.D.Sharma</td>
+										</tr>
+										<tr>
+											<td>Subject1</td>
+											<td>05:45pm to 07:15pm</td>
+											<td>Dr.H.C.Verma</td>
+										</tr>
+										<tr>
+											<td>Subject2</td>
+											<td>07:30pm to 09:00pm</td>
+											<td>Dr.O.P.Tondon</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="con1" style="margin-top: 140px">
+		<div class="row" id="sel">
+			<form method="POST" class="form-horizontal">
+        		<div class="col-md-4">
+          			<select name="course" class="form-control" onchange="showDiv(this)">
+            			<option value="Select Course" selected="selected">Select Course</option>
+            			<option value="XI & XII">XI & XII</option>
+            			<option value="CA Intermediate">CA Intermediate</option>
+            			<option value="CA Foundation">CA Foundation</option>
+          			</select>
+        		</div>
+    		</form>
+		</div><br/>
+		<div class="row" id="jee">
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch A1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.H.C.Varma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div><br/>
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch B1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div><br/>
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch C1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.H.C.Varma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="cai">
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch P1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.H.C.Varma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div><br/>
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch Q1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div><br/>
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch R1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.H.C.Varma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="caf">
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch X1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.H.C.Varma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div><br/>
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch Y1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div><br/>
+			<div class="col-md-12 text-center" style="border: 1px solid #333;border-radius: 15px;">
+				<h3>Batch Z1</h3>
+			</div><br/>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>11am-12:30pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.R.D.Sharma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>12:45pm-2:15pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.H.C.Varma</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-12">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Subject<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Subject2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Duration<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2:30pm-4:00pm</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Tutor<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>Dr.O.P.Tondon</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Dummy<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- footer -->
+<div class="container-fluid">
+    <div class="row">
+            <footer class="nb-footer">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12">
+            <div class="about">
+                <!-- <img src="images/logo.png" class="img-responsive center-block" alt=""> -->
+                <h2 style="color: #999;"><strong>RCM Institute</strong></h2>
+                <p>RCM institute is coaching institute for the preperation of 10/12 , CA Intermediate, CA Foundation.To our students ,we impart value based education and move them to their successful carrrier.</p> 
+                <!-- <p>Bootstrap Footer example snippets with CSS, Javascript and HTML. Code example of bootstrap-3 footer using HTML, Javascript, jQuery, and CSS. 5 Beautiful and Responsive Footer Templates. Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p> -->
+
+                <div class="social-media">
+                    <ul class="list-inline">
+                        <li><a href="#facebook" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#twitter" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#googleplus" title="googleplus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#linkedin" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Help Center</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Admissions</h2>
+                <ul class="list-unstyled">
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i> Admission Process</a></li>
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i>Apply Online or Apply offline</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Contact Us</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Admission Enquiry</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> General Enquiry</a></li>
+                    <li><a href="batches.html#feedback" onclick="Feedback();" title=""> Feedback</a></li>
+                    <li>
+                      
+                      <form id="feedback"  method="post" style="display: none">
+                        <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required="required" title="Email Address">
+                        </div>
+                        <div class="form-group">
+                        <textarea class="form-control" id="text" name="feedback" row="3" col="50" title="Gives Your Feedback" style="resize: none"></textarea>
+                        </div>
+                        <div class="form-group">
+                        <button class="btn btn-primary" onclick="closeFeedback();" type="button">submit</button>
+                        </div>
+                      </form>
+
+                      
+                    </li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            
+            </div>
+            </div>
+
+            <section class="copyright">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12" style="text-align: center">
+            <p>Designed By Vchip Technology </p>
+            </div>
+            
+            </div>
+            </section>
+            </footer>
+
+    </div>
+
+	</div>	
+<!-- feedback script -->
+<script>
+var x=0;
+function Feedback(){
+	if(x==0){
+		document.getElementById("text").value="";
+		document.getElementById("email").value="";
+		document.getElementById("feedback").style.display="block";
+		x=1;
+	}
+	else{
+		document.getElementById("feedback").style.display="none";
+		x=0;
+	}
+}
+function closeFeedback(){
+	document.getElementById("feedback").style.display="none";
+}
+</script>
+
+<!-- pulldown caret script -->
+<script>
+function toggleChevron(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find("i.indicator")
+        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+}
+$('#accordion').on('hidden.bs.collapse', toggleChevron);
+$('#accordion').on('shown.bs.collapse', toggleChevron);
+
+</script>
+
+<!-- page script -->
+	<script type="text/javascript">
+		document.getElementById('demo').style.maxHeight=demo.scrollHeight + "px";
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		for (i = 0; i < coll.length; i++) {
+  			coll[i].addEventListener("click", function() {
+    		this.classList.toggle("active");
+    		var content = this.nextElementSibling;
+    		if (content.style.maxHeight){
+    			content.style.maxHeight = null;
+    		}
+    		else {
+      			content.style.maxHeight = content.scrollHeight + "px";
+    		} 
+  		});
+		}
+		// var m=document.getElementsByClassName("main");
+		// for(var i=0;i<m.length-1;i++){
+		// 	m[i].style.borderBottom="none";
+		// }
+		var s=document.getElementsByClassName("subrow");
+		for(var i=3;i<s.length;i+=4){
+			s[i].style.borderBottom="none";
+		}
+		function showDiv(elem){
+			if(elem.value==="XI & XII"){
+				document.getElementById("jee").style.display="block";
+				document.getElementById("cai").style.display="none";
+				document.getElementById("caf").style.display="none";
+			}
+			else if(elem.value==="CA Intermediate"){
+				document.getElementById("jee").style.display="none";
+				document.getElementById("cai").style.display="block";
+				document.getElementById("caf").style.display="none";
+			}
+			else{
+				document.getElementById("jee").style.display="none";
+				document.getElementById("cai").style.display="none";
+				document.getElementById("caf").style.display="block";
+			}
+		}
+	</script>
+
+
+
+<!-- overlay script -->
+<script>
+	var modal = document.getElementById('id01');
+	function openNav() {
+	    document.getElementById("myNav").style.height = "100%";
+	}
+
+	function closeNav() {
+	    document.getElementById("myNav").style.height = "0%";
+	}
+</script>
+</body>
+
+</html>

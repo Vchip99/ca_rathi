@@ -1,0 +1,33 @@
+/*pagestyling*/
+.header1{
+  background-color:  #d9edf7;
+  font-weight: bold;
+}
+#div2{
+  display: none;
+}
+#div3{
+  display: none;
+}
+#div5{
+  display: none;
+}
+#div6{
+  display: none;
+}
+.button{
+  border-radius: 8px;
+  min-width: 100px;
+  float: left;
+}
+.modal input{
+  background-color: white;
+}
+.modal select{
+  background-color: white;
+}
+.modal textarea{
+  background-color: white;
+}
+
+/*pagestyling*/

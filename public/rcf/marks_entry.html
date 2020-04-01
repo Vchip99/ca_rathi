@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Marks Entry</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="sidemenu/sidemenu_layout.css">
+
+  <link rel="stylesheet" href="sidemenu/_all-skins.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css" />
+  <!-- <link href="css/slideanim.css" rel="stylesheet"/> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script src="js/slideanim.js"></script> -->
+  <style type="text/css">
+  /*sidemenuStyling*/
+
+      /*footer*/
+   @media only screen and (max-width: 1024px) {
+    .vchip-design, .institute1 {
+        display:none;
+    }
+}
+
+/*testimonial*/
+@media only screen and (max-width: 1024px) {
+    .testimonial-image {
+        display:none;
+    }
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+/*    background: #333333;
+*/    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+#sidebar{ height: 100%;
+    position: absolute;}
+@media only screen and (max-width: 766px){
+  #sidebar{
+    position:absolute;
+  }
+}
+/*sidemenuStyling*/
+
+/*pagestyling*/
+
+	.container{
+		margin-top: 10px;
+	}
+
+	th{
+		background-color: #01bafd;
+		color: white;
+	}
+	@media only screen and (max-width: 991px){
+    .top{
+      margin-top: 10px;
+    }
+  }
+
+	.btn{
+		float: right;
+	}
+
+	.btn-primary{
+		margin-right: 50px;
+	}
+
+	@media only screen and (max-width: 767px){
+		.btn-danger{
+			margin-right: 20px;
+		}
+	}
+
+	.left{
+		float: left;
+		width: 50%;
+		text-align: left;
+		padding-left: 10px;
+	}
+
+	.right{
+		float: right;
+		width: 50%;
+		text-align: center;
+	}
+
+	.fw{
+		font-weight: bold;
+	}
+
+	.arrow{
+		float: right;
+		font-weight: normal;
+	}
+
+	.main{
+		display: none;
+		border: 2px solid #999;
+		margin: 10px;
+		margin-bottom: 20px;
+	}
+
+	.subrow{
+		border-bottom: 1px solid #d3e0e9;
+	}
+
+	@media only screen and (max-width: 500px){
+		.table-responsive{
+			display: none;
+		}
+
+		.main{
+			display: block;
+		}
+	}
+	
+</style>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse" id="body">
+<div class="wrapper" style="background-color: white;">
+
+  <header class="main-header ">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b> RCM</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>RCM</b>Institute</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top ">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="zxc" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+       <!-- <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+        </ul>
+      </div> --> 
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" id="sidebar" >
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel" style="background-color: black;">
+        <div class="pull-left image">
+          <img src="img/user/user.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Lecturer</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" style="background-color: black;">
+        <li class="header">RCM</li>
+        
+        <li><a href="lecturer_panel.html"><i class="fa fa-dashboard text-aqua"></i> <span>DashBoard</span></a></li>
+
+        
+        <li><a href="assignsubmit.html"><i class="fa fa-circle-o text-yellow"></i> <span>Assignment Submission </span></a></li>
+        <li><a href="RCMtt.html"><i class="fa fa-circle-o text-red"></i> <span>Week TimeTable</span></a></li>
+        <li><a href="new_time_table.html"><i class="fa fa-circle-o text-red"></i> <span>DateWiseTimeTable</span></a></li>
+        <li><a href="marks_entry.html"><i class="fa fa-circle-o text-aqua"></i> <span>Marks Entry</span></a></li>
+        <li><a href="attendance_entry.html"><i class="fa fa-circle-o text-yellow"></i> <span>Attendance Sheet</span></a></li>
+        <!-- <li><a href="RCMtimeTable.html"><i class="fa fa-calendar text-red"></i> <span>Time Table Management</span></a></li> -->
+        <li><a href="lec_admin_message.html"><i class="fa fa-circle-o text-aqua"></i> <span>Admin Message</span></a></li>
+        
+        <li><a href="lec_doubt_corner.html"><i class="fa fa-circle-o text-red"></i> <span>Doubt Corner</span></a></li>
+        <li><a href="index.html"><i class="glyphicon glyphicon-log-out text-white"></i> <span>Logout</span></a></li>
+        
+        
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <div class="content-wrapper" style="margin-left: 40px;">
+    <div class="content-header">
+
+
+
+<!-- content -->	
+	<div class="container" style="margin-top: 50px;">
+		<div class="row " style="padding-left: 20px;"><h1>Marks Entry</h1>
+		</div><br/>
+		<div class="row">
+      <form method="POST" class="form-horizontal">
+            <div class="form-group" >
+                <div class="col-md-3">
+                  <select name="course" class="form-control" id="course" onchange="hideoption(this)">
+                      <option value="Select Course" selected="selected">Select Course</option>
+                    <option value="XI & XII">XI & XII</option>
+                    <option value="CA Intermediate">CA Intermediate</option>
+                    <option value="CA Foundation">CA Foundation</option>
+                  </select>
+                </div>
+                <div class="col-md-3 top">
+                  <select name="subcourse" class="form-control">
+                      <option value="Select subCourse" selected="selected">Select Sub Course</option>
+                    <option value="plain">Plain</option>
+                    <option value="plain1">plain1</option>
+                    <option value="plain2">plain2</option>
+                  </select>
+                </div>
+                <div class="col-md-3 top">
+                  <select name="batch" class="form-control" >
+                      <option value="Select Batch" selected="selected">Select Batch</option>
+                      <option  value="A1">A1</option>
+                      <option  value="B1">B1</option>
+                      <option  value="C1">C1</option>
+                      <option  value="P1">P1</option>
+                      <option  value="Q1">Q1</option>
+                      <option  value="R1">R1</option>
+                      <option  value="X1">X1</option>
+                      <option  value="Y1">Y1</option>
+                      <option  value="Z1">Z1</option>
+                  </select>
+                </div>
+                
+                <div class="col-md-3 top">
+                  <select name="test" class="form-control">
+                      <option value="Select test" selected="selected">Select test</option>
+                    <option value="Test1">Test1</option>
+                    <option value="Test2">Test2</option>
+                    <option value="Test3">Test3</option>
+                    <option value="Test4">Test4</option>
+                    <option value="Test5">Test5</option>
+                  </select>
+                </div>
+            </div>
+        </form>
+    </div>
+		<div class="row table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<th>Roll No.</th>
+					<th>Name of student</th>
+					<th>Enter marks</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>201800</td>
+						<td>ABC</td>
+						<td><input name="marks" placeholder="enter marks" type="number"></td>
+					</tr>
+					<tr>
+						<td>201801</td>
+						<td>ABC</td>
+						<td><input name="marks" placeholder="enter marks" type="number"></td>
+					</tr>
+					<tr>
+						<td>201802</td>
+						<td>ABC</td>
+						<td><input name="marks" placeholder="enter marks" type="number"></td>
+					</tr>
+					<tr>
+						<td>201803</td>
+						<td>ABC</td>
+						<td><input name="marks" placeholder="enter marks" type="number"></td>
+					</tr>
+					<tr>
+						<td>201804</td>
+						<td>ABC</td>
+						<td><input name="marks" placeholder="enter marks" type="number"></td>
+					</tr>
+					<tr>
+						<td>201805</td>
+						<td>ABC</td>
+						<td><input name="marks" placeholder="enter marks" type="number"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+<!-- on small screen -->
+		<div class="row main">
+			<div class="col-md-12">
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Roll No.<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>201801</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Name<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>ABC</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Marks<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<p><input name="marks" placeholder="enter marks" type="number"></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="row main">
+			<div class="col-md-12">
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Roll No.<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>201801</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Name<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>ABC</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Marks<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<p><input name="marks" placeholder="enter marks" type="number"></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="row main">
+			<div class="col-md-12">
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Roll No.<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>201801</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Name<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>ABC</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Marks<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<p><input name="marks" placeholder="enter marks" type="number"></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="row main">
+			<div class="col-md-12">
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Roll No.<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>201801</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Name<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>ABC</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Marks<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<p><input name="marks" placeholder="enter marks" type="number"></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="row main">
+			<div class="col-md-12">
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Roll No.<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>201801</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Name<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<h4>ABC</h4>
+					</div>
+				</div>
+				<div class="row subrow">
+					<div class="left">
+						<h4 class="fw">Marks<span class="arrow">-</span></h4>
+					</div>
+					<div class="right">
+						<p><input name="marks" placeholder="enter marks" type="number"></p>
+					</div>
+				</div>
+				
+			</div>
+		</div><br/>
+		<div class="row">
+			<a href="lecturer_panel.html"><button type="submit" class="btn btn-danger btn-lg">&lt;&nbsp;Back</button></a>
+			<a href="#"><button type="submit" class="btn btn-primary btn-lg">Submit</button></a>
+		</div>
+		<div class="row">
+		<br><br>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+
+
+
+<!-- page script -->
+	<script type="text/javascript">
+		
+		var s=document.getElementsByClassName("subrow");
+		for(var i=5;i<s.length;i+=6){
+			s[i].style.borderBottom="none";
+		}
+	</script>
+
+<!-- sidebar script -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+$("#header1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+$("#footer1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+</script>
+
+</body>
+</html>

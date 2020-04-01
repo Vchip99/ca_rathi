@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Payment Details</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="sidemenu/sidemenu_layout.css">
+
+  <link rel="stylesheet" href="sidemenu/_all-skins.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css" />
+  <!-- <link href="css/slideanim.css" rel="stylesheet"/> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script src="js/slideanim.js"></script> -->
+  <style type="text/css">
+  /*sidemenuStyling*/
+
+      /*footer*/
+   @media only screen and (max-width: 1024px) {
+    .vchip-design, .institute1 {
+        display:none;
+    }
+}
+
+/*testimonial*/
+@media only screen and (max-width: 1024px) {
+    .testimonial-image {
+        display:none;
+    }
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+/*    background: #333333;
+*/    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+#sidebar{ height: 100%;
+    position: absolute;}
+@media only screen and (max-width: 766px){
+  #sidebar{
+    position:absolute;
+  }
+}
+/*sidemenuStyling*/
+
+/*page styling*/
+th{
+    background-color: #01bafd;
+    color: white;
+  }
+.content-wrapper .buttons{
+  float:right;
+  margin:10px 0px;
+  margin-right: 30px; 
+}
+.content-wrapper button{
+    color: white;
+    background-color: #01bafd;
+    opacity: 0.8
+  }
+  .content-wrapper .buttons:hover button{
+    opacity: 1;
+  }
+.content-wrapper .block1{
+  margin:10px;
+}
+.content-wrapper .block2{
+  margin:0px;
+  text-align: center;
+  border:1px solid #d3e0e9;
+  padding:10px 0px;
+  display: none;
+}
+.content-wrapper .block2 .innerBlock2{
+  border-bottom: 1px solid #d3e0e9;
+  margin:10px;
+
+}
+/*.content-wrapper .createBtn{
+  margin-right: 25px;
+}*/
+@media only screen and (max-width: 785px){
+  .content-wrapper .block1{
+    display: none;
+  }
+  .content-wrapper .block2{
+    display: block;
+    margin-right: 40px;
+  }
+  /*.content-wrapper .createBtn{
+    margin-right: 55px;
+  }*/
+
+
+}
+/*page styling*/
+</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse" id="body">
+<div class="wrapper" style="background-color: white;">
+
+  <header class="main-header ">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b> RCM</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>RCM</b>Institute</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top ">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="zxc" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+       <!-- <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+        </ul>
+      </div> --> 
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" id="sidebar" >
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel" style="background-color: black;">
+        <div class="pull-left image">
+          <img src="img/user/user.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Student</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" style="background-color: black;">
+        <li class="header">RCM</li>
+        
+        <li><a href="student_panel.html"><i class="fa fa-dashboard text-aqua"></i> <span>DashBoard</span></a></li>
+
+        
+        <li><a href="attendance.html"><i class="fa fa-circle-o text-yellow"></i> <span>Attendance </span></a></li>
+        <li><a href="course.html"><i class="fa fa-circle-o text-red"></i> <span>Course</span></a></li>
+        <li><a href="test_series.html"><i class="fa fa-circle-o text-aqua"></i> <span>Test Series</span></a></li>
+        <li><a href="assignment.html"><i class="fa fa-file-text text-yellow"></i> <span>Assignment</span></a></li>
+        <!-- <li><a href="RCMtimeTable.html"><i class="fa fa-calendar text-red"></i> <span>Time Table Management</span></a></li> -->
+        <li><a href="library.html"><i class="fa fa-indent text-aqua"></i> <span>Library</span></a></li>
+        <li><a href="locker.html"><i class="fa fa-lock text-aqua"></i> <span>Locker</span></a></li>
+        <li><a href="admin_message.html"><i class="fa fa-circle-o text-aqua"></i> <span>Admin Message</span></a></li>
+        <li><a href="reading_room.html"><i class="fa fa-circle-o text-aqua"></i> <span>Reading Room</span></a></li>
+        <li><a href="payment_details.html"><i class="fa fa-circle-o text-aqua"></i> <span>Payment Details</span></a></li>
+        <li><a href="doubt_corner.html"><i class="fa fa-circle-o text-aqua"></i> <span>Doubt Corner</span></a></li>
+        <li><a href="index.html"><i class="glyphicon glyphicon-log-out text-white"></i> <span>Logout</span></a></li>
+        
+        
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <div class="content-wrapper" style="margin-left: 40px;">
+    <div class="content-header">
+    <!-- content -->            
+      <div class="container">
+        <div class="row" style="margin-top: 50px;padding-left: 20px;">
+                <h1>Payment Details</h1>
+        </div>
+        <div class="row block1">
+        <table class="table table-bordered">
+          <thead>
+          
+          <th>Course</th>
+          <th>Sub Course</th>
+          <th>Fee</th>
+          <th>Paid</th>
+          <th>Due</th>
+          <th>Dummy</th>
+          <th>Dummy</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CA Intermediate</td>
+              <td>plain</td>
+              <td>20,000</td>
+              <td>10,000</td>
+              <td>10,000</td>
+              <td>xyz</td>
+              <td>xyz</td>
+            </tr>
+            <tr>
+              <td>CA Foundation</td>
+              <td>plain</td>
+              <td>20,000</td>
+              <td>10,000</td>
+              <td>10,000</td>
+              <td>xyz</td>
+              <td>xyz</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+        <div class="row block2">
+          <div class="row innerBlock2">
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Course:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>CA Intermediate</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Sub Course:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>Plain</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Fee:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>20,000</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Paid:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>10,000</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Due:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>10,000</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Dummy:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>xyz</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Dummy:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>xyz</p>
+            </div>
+            </div>
+
+          </div>
+          <div class="row innerBlock2">
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Course:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>CA Foundation</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Sub Course:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>Plain</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Fee:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>20,000</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Paid:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>10,000</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Due:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>10,000</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Dummy:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>xyz</p>
+            </div>
+            </div>
+            <div class="row">
+            <div style="float:left;width: 50%;">
+              <p><strong>Dummy:</strong></p>
+            </div>
+            <div style="float:left;width: 50%;">
+                <p>xyz</p>
+            </div>
+            </div>
+
+          </div>
+      
+        </div>
+
+      
+      <div class="row" >
+        <div class="buttons">
+        <a href="student_panel.html"><button type="submit" class="btn  btn-lg">&lt;&nbsp;Back</button></a>
+        </div>
+      </div><br>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- sidebar script -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+$("#header1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+$("#footer1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+</script>
+</body>
+</html>

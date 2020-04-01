@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Attendance Entry</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="sidemenu/sidemenu_layout.css">
+
+  <link rel="stylesheet" href="sidemenu/_all-skins.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css" />
+  <!-- <link href="css/slideanim.css" rel="stylesheet"/> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script src="js/slideanim.js"></script> -->
+  <style type="text/css">
+  /*sidemenuStyling*/
+
+      /*footer*/
+   @media only screen and (max-width: 1024px) {
+    .vchip-design, .institute1 {
+        display:none;
+    }
+}
+
+/*testimonial*/
+@media only screen and (max-width: 1024px) {
+    .testimonial-image {
+        display:none;
+    }
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+/*    background: #333333;
+*/    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+#sidebar{ height: 100%;
+    position: absolute;}
+@media only screen and (max-width: 766px){
+  #sidebar{
+    position:absolute;
+  }
+}
+/*sidemenuStyling*/
+
+/*pagestyling*/
+	.container{
+		margin-top: 10px;
+	}
+
+	@media only screen and (max-width: 991px){
+		.top{
+			margin-top: 10px;
+		}
+	}
+
+	th{
+		background-color: #01bafd;
+		color: #fff;
+	}
+
+	.buttons{
+		float: right;
+	}
+
+	.buttons .btn-primary{
+		margin-right: 20px;
+	}
+
+	@media only screen and (max-width: 767px){
+		.buttons .btn-danger{
+			margin-right: 20px;
+		}
+	}
+
+	#a1,#b1,#c1,#p1,#q1,#r1,#x1,#y1,#z1{
+		display: none;
+	}
+
+	#sma1,#smb1,#smc1,#smp1,#smq1,#smr1,#smx1,#smy1,#smz1{
+		display: none;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.left{
+		float: left;
+		width: 50%;
+		text-align: left;
+		padding-left: 10px;
+	}
+
+	.right{
+		float: right;
+		width: 50%;
+		text-align: center;
+	}
+
+	.fw{
+		font-weight: bold;
+	}
+
+	.arrow{
+		float: right;
+		font-weight: normal;
+	}
+
+	.main{
+		display: none;
+		border: 2px solid #999;
+		margin:10px;
+		margin-bottom: 20px;
+		/*margin-left: 10px;
+		margin-right: 10px;*/
+	}
+
+	.subrow{
+		border-bottom: 1px solid #d3e0e9;
+	}
+
+	@media only screen and (max-width: 599px){
+		.table-responsive{
+			display: none;
+		}
+
+		#phy,#che,#maths,#stat,#acc{
+			display: none;
+		}
+
+		.main{
+			display: block;
+		}
+	}
+
+</style>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini sidebar-collapse" id="body" onresize="myfunction()">
+<div class="wrapper" style="background-color: white;">
+
+  <header class="main-header ">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b> RCM</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>RCM</b>Institute</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top ">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="zxc" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+       <!-- <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+        </ul>
+      </div> --> 
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" id="sidebar" >
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel" style="background-color: black;">
+        <div class="pull-left image">
+          <img src="img/user/user.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Lecturer</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" style="background-color: black;">
+        <li class="header">RCM</li>
+        
+        <li><a href="lecturer_panel.html"><i class="fa fa-dashboard text-aqua"></i> <span>DashBoard</span></a></li>
+
+        
+        <li><a href="assignsubmit.html"><i class="fa fa-circle-o text-yellow"></i> <span>Assignment Submission </span></a></li>
+        <li><a href="RCMtt.html"><i class="fa fa-circle-o text-red"></i> <span>Week TimeTable</span></a></li>
+        <li><a href="new_time_table.html"><i class="fa fa-circle-o text-red"></i> <span>DateWiseTimeTable</span></a></li>
+        <li><a href="marks_entry.html"><i class="fa fa-circle-o text-aqua"></i> <span>Marks Entry</span></a></li>
+        <li><a href="attendance_entry.html"><i class="fa fa-circle-o text-yellow"></i> <span>Attendance Sheet</span></a></li>
+        <!-- <li><a href="RCMtimeTable.html"><i class="fa fa-calendar text-red"></i> <span>Time Table Management</span></a></li> -->
+        <li><a href="lec_admin_message.html"><i class="fa fa-circle-o text-aqua"></i> <span>Admin Message</span></a></li>
+        
+        <li><a href="lec_doubt_corner.html"><i class="fa fa-circle-o text-red"></i> <span>Doubt Corner</span></a></li>
+        <li><a href="index.html"><i class="glyphicon glyphicon-log-out text-white"></i> <span>Logout</span></a></li>
+        
+        
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <div class="content-wrapper" style="margin-left: 40px;">
+    <div class="content-header">
+
+
+
+<!-- content -->
+	<div class="container" style="margin-top: 50px;">
+		<div class="row" style="padding-left: 10px;">
+		<h1>Attendance Sheet</h1>
+		</div>
+		<div class="row">
+			<form method="POST" class="form-horizontal">
+      			<div class="form-group">
+          			<div class="col-md-3">
+            			<select name="course" class="form-control" id="course" onchange="hideoption(this)">
+              				<option value="Select Course" selected="selected">Select Course</option>
+            				<option value="XI & XII">XI & XII</option>
+            				<option value="CA Intermediate">CA Intermediate</option>
+            				<option value="CA Foundation">CA Foundation</option>
+          				</select>
+          			</div>
+          			<div class="col-md-3 top">
+            			<select name="batch" class="form-control" id="sub" onchange="showDiv(this)">
+              				<option value="Select Batch" selected="selected">Select Batch</option>
+              				<option id="a" value="A1">A1</option>
+              				<option id="b" value="B1">B1</option>
+              				<option id="c" value="C1">C1</option>
+              				<option id="p" value="P1">P1</option>
+              				<option id="q" value="Q1">Q1</option>
+              				<option id="r" value="R1">R1</option>
+              				<option id="x" value="X1">X1</option>
+              				<option id="y" value="Y1">Y1</option>
+              				<option id="z" value="Z1">Z1</option>
+            			</select>
+          			</div>
+          			<div class="col-md-3 top">
+          				<input type="date" name="date" class="form-control" />
+          			</div>
+          			<div class="col-md-3 top">
+          				<input type="search" name="search student" placeholder="Search Name" class="form-control" />
+          			</div>
+        		</div>
+    		</form>
+		</div>
+		<div class="row" id="a1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>ABC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>PQR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>XYZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="b1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>BAC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>PQR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>XYZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="c1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>CAB</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>PQR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>XYZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="p1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>PQR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>ABC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>XYZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="q1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>QPR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>ABC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>XYZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="r1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>RPQ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>ABC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>XYZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="x1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>XYZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>PQR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>ABC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="y1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>YXZ</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>PQR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>ABC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="z1">
+			<table class="table table-bordered">
+				<thead>
+					<th>Sr No.</th>
+					<th>Student Name</th>
+					<th>Attendance</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>ZXY</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>DEF</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>KLM</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>PQR</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>ABC</td>
+						<td><input type="checkbox" name="attendance" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row" id="sma1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smb1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smc1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smp1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smq1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smr1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smx1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smy1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="smz1">
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>1</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>2</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>3</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>4</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row main">
+				<div class="col-md-10">
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Sr No.<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>5</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Student Name<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4>ABC</h4>
+						</div>
+					</div>
+					<div class="row subrow">
+						<div class="left">
+							<h4 class="fw">Attendance<span class="arrow">-</span></h4>
+						</div>
+						<div class="right">
+							<h4><input type="checkbox" name="attendance" /></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br/>
+		<div class="row buttons">
+			<a href="#"><button type="submit" class="btn btn-primary btn-lg">Submit</button></a>
+			<a href="lecturer_panel.html"><button type="submit" class="btn btn-danger btn-lg">&lt;&nbsp;Back</button></a>
+		</div>
+		<div class="row">
+		<br><br><br>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+
+
+
+<!-- page script -->
+	<script type="text/javascript">
+		function hideoption(elem){
+	      if(elem.value==="XI & XII"){
+	        document.getElementById("p").style.display="none";
+	        document.getElementById("q").style.display="none";
+	        document.getElementById("r").style.display="none";
+	        document.getElementById("x").style.display="none";
+	        document.getElementById("y").style.display="none";
+	        document.getElementById("z").style.display="none";
+	        document.getElementById("a").style.display="block";
+	        document.getElementById("b").style.display="block";
+	        document.getElementById("c").style.display="block";
+	      }
+	      else if(elem.value==="CA Intermediate"){
+	        document.getElementById("p").style.display="block";
+	        document.getElementById("q").style.display="block";
+	        document.getElementById("r").style.display="block";
+	        document.getElementById("x").style.display="none";
+	        document.getElementById("y").style.display="none";
+	        document.getElementById("z").style.display="none";
+	        document.getElementById("a").style.display="none";
+	        document.getElementById("b").style.display="none";
+	        document.getElementById("c").style.display="none";
+	      }
+	      else{
+	        document.getElementById("p").style.display="none";
+	        document.getElementById("q").style.display="none";
+	        document.getElementById("r").style.display="none";
+	        document.getElementById("x").style.display="block";
+	        document.getElementById("y").style.display="block";
+	        document.getElementById("z").style.display="block";
+	        document.getElementById("a").style.display="none";
+	        document.getElementById("b").style.display="none";
+	        document.getElementById("c").style.display="none";
+	      }
+    	}
+    	function showDiv(elem){
+    		if(screen.width>=600){
+		      if(elem.value==="A1"){
+		        document.getElementById("a1").style.display="block";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else if(elem.value==="B1"){
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="block";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else if(elem.value==="C1"){
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="block";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else if(elem.value==="P1"){
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="block";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else if(elem.value==="Q1"){
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="block";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else if(elem.value==="R1"){
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="block";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else if(elem.value==="X1"){
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="block";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else if(elem.value==="Y1"){
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="block";
+		        document.getElementById("z1").style.display="none";
+		      }
+		      else{
+		        document.getElementById("a1").style.display="none";
+		        document.getElementById("b1").style.display="none";
+		        document.getElementById("c1").style.display="none";
+		        document.getElementById("p1").style.display="none";
+		        document.getElementById("q1").style.display="none";
+		        document.getElementById("r1").style.display="none";
+		        document.getElementById("x1").style.display="none";
+		        document.getElementById("y1").style.display="none";
+		        document.getElementById("z1").style.display="block";
+		      }
+		  	}
+		  	else{
+		  		if(elem.value==="A1"){
+		        document.getElementById("sma1").style.display="block";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else if(elem.value==="B1"){
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="block";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else if(elem.value==="C1"){
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="block";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else if(elem.value==="P1"){
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="block";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else if(elem.value==="Q1"){
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="block";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else if(elem.value==="R1"){
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="block";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else if(elem.value==="X1"){
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="block";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else if(elem.value==="Y1"){
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="block";
+		        document.getElementById("smz1").style.display="none";
+		      }
+		      else{
+		        document.getElementById("sma1").style.display="none";
+		        document.getElementById("smb1").style.display="none";
+		        document.getElementById("smc1").style.display="none";
+		        document.getElementById("smp1").style.display="none";
+		        document.getElementById("smq1").style.display="none";
+		        document.getElementById("smr1").style.display="none";
+		        document.getElementById("smx1").style.display="none";
+		        document.getElementById("smy1").style.display="none";
+		        document.getElementById("smz1").style.display="block";
+		      }
+		  	}
+    	}
+    	function myfunction(){
+		 	var v=document.getElementById("sub").value;
+		 	if(screen.width<600){
+		 		if(v==="A1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="block";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="B1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="block";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="C1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="block";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="P1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="block";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="Q1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="block";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="R1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="block";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="X1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="block";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="Y1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="block";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 		else if(v==="Z1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="block";
+		 		}
+		 		else{
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 			document.getElementById("sma1").style.display="none";
+		 			document.getElementById("smb1").style.display="none";
+		 			document.getElementById("smc1").style.display="none";
+		 			document.getElementById("smp1").style.display="none";
+		 			document.getElementById("smq1").style.display="none";
+		 			document.getElementById("smr1").style.display="none";
+		 			document.getElementById("smx1").style.display="none";
+		 			document.getElementById("smy1").style.display="none";
+		 			document.getElementById("smz1").style.display="none";
+		 		}
+		 	}
+		 	else{
+		 		if(v==="A1"){
+		 			document.getElementById("a1").style.display="block";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 		else if(v==="B1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="block";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 	 	else if(v==="C1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="block";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 	 	else if(v==="P1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="block";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 		else if(v==="Q1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="block";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 		else if(v==="R1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="block";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 		else if(v==="X1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="block";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 		else if(v==="Y1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="block";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 		else if(v==="Z1"){
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="block";
+		 		}
+		 		else{
+		 			document.getElementById("a1").style.display="none";
+		 			document.getElementById("b1").style.display="none";
+		 		 	document.getElementById("c1").style.display="none";
+		 		 	document.getElementById("p1").style.display="none";
+		 		 	document.getElementById("q1").style.display="none";
+		 		 	document.getElementById("r1").style.display="none";
+		 		 	document.getElementById("x1").style.display="none";
+		 		 	document.getElementById("y1").style.display="none";
+		 		 	document.getElementById("z1").style.display="none";
+		 		}
+		 	}
+		}
+  //   	var m=document.getElementsByClassName("main");
+		// for(var i=0;i<m.length-1;i++){
+		// 	m[i].style.borderBottom="none";
+		// }
+		var s=document.getElementsByClassName("subrow");
+		for(var i=2;i<s.length;i+=3){
+			s[i].style.borderBottom="none";
+		}
+	</script>
+
+<!-- sidebar script -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+$("#header1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+$("#footer1").click(function() {
+  $("body").addClass("sidebar-collapse");
+})
+</script>
+
+</body>
+
+</html>

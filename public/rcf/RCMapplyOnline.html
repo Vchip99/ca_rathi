@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+<title>RCM Apply Online</title>
+<meta name="description" content="Basic html form ">
+<meta charset="UTF-8">
+<meta name="keywords" content="html,htmlform,form">
+<meta name="author" content="Nilesh Soni">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- commonstylesheet -->
+<link rel="stylesheet" href="RCMcssFiles/RCMcommon.css">
+<style>
+
+
+/*pagestyling*/
+.buttons{
+	padding: 10px;
+	background-color: #f5f5f5;
+}
+/*pagestyling*/
+</style>
+</head>
+<body>
+<!-- overlay -->
+<div id="myNav" class="overlay">
+    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+    <div class="overlay-content">
+      
+      <div class="col-sm-6 col-sm-offset-2 col-1" >
+      
+        <div class="form-wrap" id="id01" style="z-index:25;margin:auto;">
+          <div class="row" id="r2">
+            <form method="POST" >
+              <div class="form-group" style=" color: white;border-radius: 4px;">
+                <ul class="nav nav-tabs">
+                <li class="active col-xs-5" ><a href="#signin" data-toggle="tab" style="text-align: center"><h3><strong>Sign In</strong></h3></a></li>
+                
+                <li class="col-xs-5" style="text-align: center;"><a href="#signup" data-toggle="tab"><h3><strong>Sign Up</strong></h3></a></li>
+                <li class="col-xs-2"><span onclick="closeNav()"  class="close" title="Close Modal">&times;</span></li>
+                <!-- <li><span onclick="closelog1()" class="close" title="Close Modal">&times;</span></li> -->
+                </ul>
+              </div>
+              <div class="tab-content"> 
+                <div id="signin" class="tab-pane fade in active">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                <div style="float:left;width:50%">
+                  <button type="submit" class="btn" style="width: 100%">Sign In</button>
+                </div>
+                <div style="float: right;width:50%;text-align: center;color:white;">
+                  <a href="#" style="font-size: 14px"><strong>Forgot Password?</strong></a> 
+                </div>
+                </div>
+              </div>
+              <div id="signup" class="tab-pane fade">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="User Name" class="form-control" />
+                </div>
+                <!-- <div class="form-group">
+                    <input type="text" name="mobileNo" placeholder="Mobile No." class="form-control" />
+                </div> -->
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="example@gmail.com" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                <div style="float:left;width:50%">
+                  <button type="submit" class="btn" style="width: 100%">Sign Up</button>
+                </div>
+                <div style="float: right;width:50%;text-align:center;color:white;">
+                  <a href="#" style="font-size: 14px"><strong>Already Member?</strong></a> 
+                </div>
+                </div>
+              </div>
+            </div>   
+            </form>
+    
+        </div>
+      </div>
+      <!-- <a href="#" id="icon1"style="font-size: 200px"><span class="glyphicon glyphicon-user" onclick="openlog1()"></span></a> --> 
+      </div>
+    </div>
+</div>
+
+ <!-- nav1 -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="nav1" >
+        <div class="container-fluid">
+            <div class="navbar-header" style="padding-bottom: 10px;">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                <span class="caret" style="color: white"></span>
+                </button>
+                <a href="index.html" class="navbar-brand"><span class="glyphicon glyphicon-home"></span>Home</a>
+              
+              
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar1">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="aboutrcm.html">About Us</a></li>
+              <li><a href="contactUs.html"><span class="glyphicon glyphicon-earphone"></span>Contact Us</a></li>
+              
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a onclick="openNav();" style="cursor:pointer"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+              
+              
+            </ul>
+            </div>
+            
+            
+            
+        </div>
+      </nav>
+
+  <!-- nav2 -->
+      <nav class="navbar navbar-default navbar-fixed-top" id="nav2" >
+        <div class="container-fluid">
+            <div class="navbar-header" style="margin-right: 40px;">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+             </button>
+              <a class="navbar-brand" href="index.html">RCM <span id="institute" >Institute</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" >
+              <ul class="nav navbar-nav navbar-right">
+                  <!-- <li><a href="courses.html"><span class="glyphicon glyphicon-"></span>Courses</a></li> -->
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-"></span> Courses<span class="caret"></span></a>
+                  <ul class="dropdown-menu" style="margin-right: 75%">
+                    <li ><a href="RCM10.html">10/12</a></li>
+                    <li ><a href="caIntermediate.html">CA Intermediate</a></li>
+                    <li ><a href="#logout">CA Foundation</a></li>
+                    <!-- <li ><a href="#logout"><span class="glyphicon glyphicon-log-out"></span></a></li> -->
+                  </ul>
+                  </li>
+                  <li class="navbarHover"><a href="RCMtestseries.html">Test Series</a></li>
+                  <li class="navbarHover"><a href="batches.html">Batches</a></li>
+              
+                <li class="navbarHover"><a href="RCMfaq.html"><span class="glyphicon glyphicon-"></span>FAQ's</a></li>
+                  <li class="navbarHover"><a href="RCMcarrer.html"><span class="glyphicon glyphicon-"></span>Carrer</a></li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+                  <ul class="dropdown-menu" style="margin-right: 75%">
+                    <li ><a href="student_panel.html">Student</a></li>
+                    <li ><a href="parent_panel.html">Parent</a></li>
+                    <li ><a href="lecturer_panel.html">Lecturer</a></li>
+                    <li ><a href="RCMadminPanel2.html">Admin</a></li>
+                    
+                  </ul>
+              </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+<!-- content -->
+<div class="container">
+	<div class="row" style="margin-top: 120px;">
+		<h1>Online Registration Form</h1>
+	</div>
+	<div class="row" style="margin-top:20px;padding: 20px;background-color: #f5f5f5;">
+		<form method="post">
+			<div class="col-md-6">
+              <div class="form-group">
+                <label for="name" class="control-label ">Name:</label>
+                <div>
+                  <input type="text" name="name" id="name" placeholder="Name" required="required" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="fname" class="control-label">Father's Name:</label>
+                <div>
+                  <input type="text" name="fname" id="fname" placeholder="" aceholder="Fathers Name" required="required" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="DOB" class="control-label ">DOB:</label>
+                <div>
+                  <input type="text" name="DOB" id="DOB" placeholder="DOB"  class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="control-label">Email:</label>
+                <div>
+                  <input type="email" name="email" placeholder="e.g. example@gmail.com" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mobile" class=" control-label">Student Contact:</label>
+                <div>
+                  <input type="phone" name="sMobile" placeholder="10 digit phone number" pattern="[0-9]{10}" required="required" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mobile" class=" control-label">Parent Contact:</label>
+                <div>
+                  <input type="phone" name="pMobile" placeholder="10 digit phone number" pattern="[0-9]{10}" required="required" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="gender" class="control-label">Gender:</label>
+                <div>
+                  <select name="type" class="form-control" required="required">
+                    <option value="male" selected="selected">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    
+                  </select>
+                </div>
+              </div>
+            
+            
+              <div class="form-group">
+                <label for="Course" class="control-label" required="required">Course:</label>
+                <div>
+                  <select name="type" class="form-control">
+                    <option value="10/12" selected="selected">10/12</option>
+                    <option value="CA Intermediate">CA Intermediate</option>
+                    <option value="CA Foundation">CA Foundation</option>
+                    
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="pAddress" class="control-label">Permanent Address:</label>
+                <div>
+                  <textarea name="pAddress" rows="3" cols="50" style="resize:none;border-radius:4px;" class="form-control" required="required"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lAddress" class="control-label">Local Address:</label>
+                <div>
+                  <textarea name="lAddress" rows="3" cols="50" style="resize:none;border-radius:4px;" class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+        </form>
+    </div>
+    <div class="buttons row">
+	    <div style="float:left;">
+	        <a href="#"><button class="btn btn-success">Proceed To Pay</button></a>
+	    </div>
+	    <div style="float:right;">
+	        <a href="RCMadmission.html"><button class="btn btn-danger">Cancel</button></a>
+	    </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="container-fluid">
+    <div class="row">
+            <footer class="nb-footer">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12">
+            <div class="about">
+                <!-- <img src="images/logo.png" class="img-responsive center-block" alt=""> -->
+                <h2 style="color: #999;"><strong>RCM Institute</strong></h2>
+                <p>RCM institute is coaching institute for the preperation of 10/12 , CA Intermediate, CA Foundation.To our students ,we impart value based education and move them to their successful carrrier.</p> 
+                <!-- <p>Bootstrap Footer example snippets with CSS, Javascript and HTML. Code example of bootstrap-3 footer using HTML, Javascript, jQuery, and CSS. 5 Beautiful and Responsive Footer Templates. Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p> -->
+
+                <div class="social-media">
+                    <ul class="list-inline">
+                        <li><a href="#facebook" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#twitter" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#googleplus" title="googleplus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#linkedin" title="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Help Center</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Admissions</h2>
+                <ul class="list-unstyled">
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i> Admission Process</a></li>
+                    <li><a href="RCMadmission.html" title=""><i class="fa fa-angle-double-right"></i>Apply Online or Apply offline</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+            <div class="footer-info-single">
+                <h2 class="title">Contact Us</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Admission Enquiry</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> General Enquiry</a></li>
+                    <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Feedback</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+
+            
+            </div>
+            </div>
+
+            <section class="copyright">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12" style="text-align: center">
+            <p>Designed By Vchip Technology </p>
+            </div>
+            
+            </div>
+            </section>
+            </footer>
+
+    </div>
+
+</div>
+<!-- overlayscript -->
+<script>
+var modal = document.getElementById('id01');
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+
+</script>
+</body>
+</html>
